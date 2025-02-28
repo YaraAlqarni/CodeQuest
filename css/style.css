@@ -1,0 +1,97 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0d1117;
+    color: #c9d1d9;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #161b22;
+    color: #ffffff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #a855f7;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+nav ul li a {
+    color: #a855f7;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #a855f7;
+}
+
+.about-us {
+    padding: 40px;
+    text-align: center;
+    background-color: #21262d;
+    border-radius: 8px;
+}
+
+.mytable {
+    width: 80%;
+    border-collapse: collapse;
+    margin: 20px auto;
+    background-color: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.tableHeader {
+    background-color: #a855f7;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.cells {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #30363d;
+}
+
+
+
+.fa-brands {
+    margin: 5px;
+    color: #a855f7;
+    font-size: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.fa-brands:hover {
+    transform: scale(1.2);
+    color: #ffffff;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #161b22;
+    color: #c9d1d9;
+    font-size: 14px;
+    border-top: 1px solid #a855f7;
+}
