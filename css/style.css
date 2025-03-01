@@ -4,6 +4,9 @@ body {
     color: #c9d1d9;
     margin: 0;
     padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 header {
@@ -15,6 +18,7 @@ header {
     align-items: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+
 
 h1 {
     margin: 0;
@@ -94,4 +98,117 @@ footer {
     color: #c9d1d9;
     font-size: 14px;
     border-top: 1px solid #a855f7;
+    margin-top: auto;
 }
+.contact-section {
+    width: 50%;
+    margin: 50px auto;
+    background-color: #161b22;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+h4 {
+    text-align: center;
+    color: #a855f7;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.contact-form-label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+    color: #a855f7;
+}
+
+.contact-form-input, .contact-form-select, .contact-form-textarea {
+    width: calc(100% - 22px);
+    box-sizing: border-box;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #30363d;
+    border-radius: 5px;
+    background-color: #161b22;
+    color: #c9d1d9;
+}
+
+.contact-form-textarea {
+    resize: none;
+}
+
+.form-container {
+    text-align: center;
+}
+
+.contact-form-submit, 
+.contact-form-clear {
+    background-color: #a855f7;
+    color: #161b22;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+.contact-form-submit:hover, 
+.contact-form-clear:hover {
+    background-color: #8b46d7;
+}
+.team-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 800px;
+    padding: 90px 0;
+    margin: 40px auto;
+}
+
+.contact-page {
+    font-family: Arial, sans-serif;
+    background-color: #0d1117;
+    color: #c9d1d9;
+    margin: 0;
+    padding: 0;
+}
+.team-card {
+    background-color: #a855f7;
+    color: #161b22;
+    padding: 20px;
+    border-radius: 8px;
+    width: 200px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+.team-card:hover {
+    transform: scale(1.1);
+}
+.team-card h3 {
+    margin: 10px 0;
+}
+.team-card p {
+    font-weight: bold;
+}
+.contact-btn {
+    display: inline-block;
+    background-color: #161b22;
+    color: #a855f7;
+    border: none;
+    padding: 10px 15px;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+.contact-btn:hover {
+    background-color: #161b22;
+}
+
