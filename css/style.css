@@ -17,15 +17,11 @@ header {
     justify-content: space-between;
     align-items: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 97%;
+   
 }
-
 
 h1 {
-    margin: 0;
-    font-size: 24px;
-    color: #a855f7;
-}
-h2{
     margin: 0;
     font-size: 24px;
     color: #a855f7;
@@ -104,6 +100,7 @@ footer {
     font-size: 14px;
     border-top: 1px solid #a855f7;
     margin-top: auto;
+    width: 97%;
 }
 .contact-section {
     width: 50%;
@@ -217,6 +214,9 @@ h4 {
     background-color: #161b22;
 }
 
+
+/* Quiz section*/
+
 .quiz-section {
     width: 50%;
     margin: 50px auto;
@@ -298,4 +298,63 @@ h4 {
 
 .answer-button:active {
     background-color: #6a2f98; /* اللون الغامق الذي ترغب به عند الضغط */
+}
+
+
+
+/*p4 styling*/
+
+
+body.p4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #21262d;
+}
+
+
+.quiz-card {
+    margin-top: 8rem;
+    background-color: #30363d;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(59, 54, 54, 0.2);
+    width: 500px;
+    height: 250px;
+    text-align: center;
+}
+
+.quiz-card h1 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: #ffffff;
+}
+
+
+.button-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;           
+    margin: 0.5rem 0;      
+    font-size: 2rem;      
+    color: #373636;       
+    width: 100%;          
+}
+
+
+.language-button, .level-button {
+    background-color: #30363d;
+    color: #ffffff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 1rem;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+
+.language-button:hover, .level-button:hover {
+    background-color: #8b46d7;
 }

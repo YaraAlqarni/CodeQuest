@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starting Page</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body class="p4">
+    <header class="p4">
+        <h1>Level & preferences</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="About-us.html">About Us</a></li>
+                <li><a href="Contact-us.html" class="active">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    
+    <div class="quiz-card" id="language-card">
+        <h1>Choose A Programming Language: </h1>
+        <form id="quiz-form">
+           
+            <input type="hidden" id="selected-language" name="language">
+
+            
+            <div class="button-group">
+                <button type="button" class="language-button" data-value="Java">Java</button>
+                <button type="button" class="language-button" data-value="Python">Python</button>
+            </div>
+        </form>
+    </div>
+
+   
+    <div class="quiz-card" id="level-card" style="display: none;">
+        <h1>Choose Your Level</h1>
+        <form id="level-form">
+          
+            <div class="button-group">
+                <button type="button" class="level-button" data-value="Beginner">Beginner</button>
+                <button type="button" class="level-button" data-value="Intermediate">Intermediate</button>
+                <button type="button" class="level-button" data-value="Advanced">Advanced</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="../JS/main.js"></script>
+
+    <footer>
+    &copy; 2025 CodeQuest - all rights reserved
+</footer>
+</body>
+
+</html>
