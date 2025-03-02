@@ -1,4 +1,11 @@
-// script.js
+// Typing Effect
+var typingEffect = new Typed(".typedText", {
+    strings: ["CODE QUEST"],
+    loop: true,
+    typeSpeed: 100,
+    backSpeed: 80,
+    backDelay: 500
+});
 
 // Get the cards and buttons
 const languageCard = document.getElementById('language-card');
@@ -23,7 +30,7 @@ levelButtons.forEach(button => {
     button.addEventListener('click', () => {
         const selectedLevel = button.getAttribute('data-value');
 
-        
+
         if (selectedLevel === "Beginner") {
             window.location.href = "Quiz.html";
         } else if (selectedLevel === "Intermediate") {
