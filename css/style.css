@@ -1,7 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Miniver&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Miniver&family=VT323&display=swap');
-
-
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 body {
     font-family: Arial, sans-serif;
     background-color: #0d1117;
@@ -21,21 +18,8 @@ header {
     justify-content: space-between;
     align-items: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 97%;
-
 }
 
-nav {
-    position: fixed;
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    height: fit-content;
-    line-height: 90px;
-    padding-inline: 19px;
-    transition: .3s;
-    z-index: 100;
-}
 
 h1 {
     margin: 0;
@@ -55,190 +39,15 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #681fad;
+    color: #a855f7;
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s;
 }
 
 nav ul li a:hover {
-    color: #b084e3;
+    color: #a855f7;
 }
-
-/* ----------------------- Index page -----------------------*/
-
-.container {
-    width: 100%;
-    position: relative;
-}
-
-
-.nav-logo {
-    position: relative;
-}
-
-.nav-name {
-    font-size: 26px;
-    font-weight: 600;
-    padding-left: 50px;
-    align-self: start;
-    color: rgb(122, 122, 122);
-
-}
-
-.nav-logo span {
-
-    position: absolute;
-    top: -15px;
-    right: -20px;
-    font-size: 5.5em;
-    color: rgba(68, 68, 68, 0.884);
-}
-
-.nav-menu,
-.nav_menu_list {
-    margin-right: 40px;
-    display: flex;
-    font-size: 18px;
-}
-
-.nav-menu .nav_list {
-    list-style: none;
-    position: relative;
-}
-
-.nav-link {
-    text-decoration: none;
-    color: rgb(122, 122, 122);
-    font-weight: 500;
-    padding-inline: 15px;
-    margin-inline: 20px;
-}
-
-
-.Hero {
-    padding-inline: 10vw;
-}
-
-.featured-box {
-    position: relative;
-    display: flex;
-    height: 100vh;
-}
-
-.featured-text {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    min-height: 80vh;
-    flex-direction: column;
-    width: 50%;
-    padding-left: 10px;
-}
-
-.featured-name {
-
-    margin-bottom: -50px;
-    color: rgba(144, 144, 144, 0.342);
-    font-size: 18px;
-    font-weight: 400;
-    font-style: normal;
-}
-
-.featured-name2 {
-    margin-bottom: -10px;
-    color: rgba(255, 255, 255, 0.055);
-    font-size: 63px;
-    font-family: "VT323", serif;
-    font-weight: 400;
-    font-style: normal;
-}
-
-.typedText {
-    text-transform: capitalize;
-    color: rgb(123, 45, 234);
-}
-
-.featured-text-info {
-    font-size: 34px;
-    font-weight: bold;
-    margin-bottom: 40px;
-    color: rgb(195, 195, 195);
-}
-
-.featured-text-info2 {
-    font-size: 20px;
-    margin-bottom: 30px;
-    font-weight: lighter;
-    color: rgba(195, 195, 195, 0.736);
-}
-
-.text-btn {
-    display: flex;
-    gap: 30px;
-}
-
-.btn {
-    margin-top: 2rem;
-    padding: 8px 40px;
-    border: 2px solid transparent;
-    font-weight: bold;
-    font-size: 16px;
-    cursor: pointer;
-    transition: 0.3s ease;
-    border-radius: 25px;
-}
-
-.pureple-btn {
-    background: rgb(123, 45, 234);
-    color: white;
-}
-
-.pureple-btn:hover {
-    background: rgb(177, 170, 255);
-}
-
-.btn:not(.pureple-btn) {
-    background: transparent;
-    color: rgb(122, 122, 122);
-    border: 2px solid rgb(122, 122, 122);
-}
-
-.btn:not(.pureple-btn):hover {
-    border: 2px solid rgb(123, 45, 234);
-    color: rgb(123, 45, 234);
-}
-
-
-.featured-image {
-    display: flex;
-    justify-content: right;
-    align-content: center;
-    min-height: 80vh;
-    width: 50%;
-}
-
-.image {
-    margin: auto 0;
-    width: 520px;
-    height: 580px;
-    overflow: hidden;
-    animation: imgFloat 7s ease-in-out infinite;
-}
-
-.image img {
-    width: 580px;
-    height: 580px;
-    object-fit: cover;
-}
-
-
-.section {
-    padding-block: 5em;
-}
-
-/* ----------------------- About page -----------------------*/
 
 .about-us {
     padding: 40px;
@@ -291,9 +100,8 @@ footer {
     font-size: 14px;
     border-top: 1px solid #a855f7;
     margin-top: auto;
-    width: 97%;
+    
 }
-
 .contact-section {
     width: 50%;
     margin: 50px auto;
@@ -317,9 +125,7 @@ h4 {
     color: #a855f7;
 }
 
-.contact-form-input,
-.contact-form-select,
-.contact-form-textarea {
+.contact-form-input, .contact-form-select, .contact-form-textarea {
     width: calc(100% - 22px);
     box-sizing: border-box;
     padding: 10px;
@@ -338,7 +144,7 @@ h4 {
     text-align: center;
 }
 
-.contact-form-submit,
+.contact-form-submit, 
 .contact-form-clear {
     background-color: #a855f7;
     color: #161b22;
@@ -351,11 +157,10 @@ h4 {
     transition: background 0.3s;
 }
 
-.contact-form-submit:hover,
+.contact-form-submit:hover, 
 .contact-form-clear:hover {
     background-color: #8b46d7;
 }
-
 .team-section {
     display: flex;
     justify-content: center;
@@ -374,7 +179,6 @@ h4 {
     margin: 0;
     padding: 0;
 }
-
 .team-card {
     background-color: #a855f7;
     color: #161b22;
@@ -384,19 +188,15 @@ h4 {
     text-align: center;
     transition: transform 0.3s ease-in-out;
 }
-
 .team-card:hover {
     transform: scale(1.1);
 }
-
 .team-card h3 {
     margin: 10px 0;
 }
-
 .team-card p {
     font-weight: bold;
 }
-
 .contact-btn {
     display: inline-block;
     background-color: #161b22;
@@ -410,12 +210,119 @@ h4 {
     text-decoration: none;
     transition: background 0.3s;
 }
-
 .contact-btn:hover {
     background-color: #161b22;
 }
 
+.Hero {
+    padding-inline: 10vw;
+}
 
+.featured-box {
+    position: relative;
+    display: flex;
+    height: 100vh;
+}
+.featured-text {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    min-height: 80vh;
+    flex-direction: column;
+    width: 50%;
+    padding-left: 10px;
+}
+
+.featured-name {
+    margin-bottom: -50px;
+    color: rgba(144, 144, 144, 0.342);
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.featured-name2 {
+    margin-bottom: -10px;
+    color: rgba(255, 255, 255, 0.055);
+    font-size: 63px;
+    font-family: "VT323", serif;
+    font-weight: 400;
+}
+
+.typedText {
+    text-transform: capitalize;
+    color: rgb(123, 45, 234);
+}
+
+.featured-text-info {
+    font-size: 34px;
+    font-weight: bold;
+    margin-bottom: 40px;
+    color: rgb(195, 195, 195);
+}
+
+.featured-text-info2 {
+    font-size: 20px;
+    margin-bottom: 30px;
+    font-weight: lighter;
+    color: rgba(195, 195, 195, 0.736);
+}
+.text-btn {
+    display: flex;
+    gap: 30px;
+}
+
+.btn {
+    margin-top: 2rem;
+    padding: 8px 40px;
+    border: 2px solid transparent;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    border-radius: 25px;
+}
+
+.pureple-btn {
+    background: rgb(123, 45, 234);
+    color: white;
+}
+
+.pureple-btn:hover {
+    background: rgb(177, 170, 255);
+}
+
+.btn:not(.pureple-btn) {
+    background: transparent;
+    color: rgb(122, 122, 122);
+    border: 2px solid rgb(122, 122, 122);
+}
+
+.btn:not(.pureple-btn):hover {
+    border: 2px solid rgb(123, 45, 234);
+    color: rgb(123, 45, 234);
+}
+
+.featured-image {
+    display: flex;
+    justify-content: right;
+    align-content: center;
+    min-height: 80vh;
+    width: 50%;
+}
+
+.image {
+    margin: auto 0;
+    width: 520px;
+    height: 580px;
+    overflow: hidden;
+}
+
+.image img {
+    width: 580px;
+    height: 580px;
+    object-fit: cover;
+}
 /* Quiz section*/
 
 .quiz-section {
@@ -507,7 +414,6 @@ h4 {
 }
 
 
-
 /*p4 styling*/
 
 
@@ -518,9 +424,8 @@ body.p4 {
     background-color: #21262d;
 }
 
-
 .quiz-card {
-    margin-top: 8rem;
+    margin-top: 8rem;  /* You can adjust or remove this */
     background-color: #30363d;
     padding: 2rem;
     border-radius: 10px;
@@ -536,7 +441,6 @@ body.p4 {
     color: #ffffff;
 }
 
-
 .button-group {
     display: flex;
     flex-direction: column;
@@ -546,7 +450,6 @@ body.p4 {
     color: #373636;
     width: 100%;
 }
-
 
 .language-button,
 .level-button {
@@ -561,8 +464,68 @@ body.p4 {
     font-size: 1.5rem;
 }
 
-
 .language-button:hover,
 .level-button:hover {
     background-color: #8b46d7;
 }
+
+@media (max-width: 992px) {
+    header {
+        padding: 15px;
+    }
+    h2 {
+        font-size: 2.2em;
+    }
+    h3 {
+        font-size: 1.6em;
+    }
+    section {
+        padding: 10px;
+    }
+    p, h4 {
+        font-size: 1em;
+    }
+ 
+    .icons a {
+        font-size: 1.5em;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 15px;
+    }
+    h2 {
+        font-size: 2em;
+    }
+    h3 {
+        font-size: 1.5em;
+    }
+    section {
+        margin: 5px 0;
+    }
+
+    .icons a {
+        font-size: 1.4em;
+    }
+}
+
+@media (max-width: 576px) {
+    header {
+        padding: 10px;
+    }
+    h2 {
+        font-size: 1.8em;
+    }
+    h3 {
+        font-size: 1.4em;
+    }
+    section {
+        padding: 10px;
+    }
+
+    .icons a {
+        font-size: 1.2em;
+    }
+}
+
