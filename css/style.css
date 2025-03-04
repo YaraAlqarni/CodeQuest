@@ -18,6 +18,7 @@ header {
     justify-content: space-between;
     align-items: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 97%;
 }
 
 
@@ -100,8 +101,10 @@ footer {
     font-size: 14px;
     border-top: 1px solid #a855f7;
     margin-top: auto;
-    
+    width: 97%;   
+     
 }
+
 .contact-section {
     width: 50%;
     margin: 50px auto;
@@ -414,60 +417,95 @@ h4 {
 }
 
 
-/*p4 styling*/
-
-
+    /*----p4 styling----*/
+    
 body.p4 {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
+    min-height: 100vh;
     background-color: #21262d;
+    font-family: Arial, sans-serif;
+    color: #ffffff;
+    margin: 0;
 }
 
-.quiz-card {
-    margin-top: 8rem;  /* You can adjust or remove this */
+.card {
+    margin-top: 5rem;
+    margin-bottom: 2rem;
     background-color: #30363d;
     padding: 2rem;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(59, 54, 54, 0.2);
-    width: 500px;
-    height: 250px;
+    width: 100%;
+    max-width: 500px;
     text-align: center;
 }
 
-.quiz-card h1 {
+.card h1 {
     font-size: 1.5rem;
     margin-bottom: 1.5rem;
     color: #ffffff;
 }
 
-.button-group {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    margin: 0.5rem 0;
-    font-size: 2rem;
-    color: #373636;
-    width: 100%;
+.form-group {
+    margin-bottom: 1.5rem;
+    text-align: left;
 }
 
-.language-button,
-.level-button {
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #ffffff;
+    font-size: 1rem;
+}
+
+.form-group input[type="text"],
+.form-group input[type="date"],
+.form-group input[type="tel"],
+.form-group select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 2px solid #8b46d7;
+    border-radius: 10px;
     background-color: #30363d;
+    color: #ffffff;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s;
+    box-sizing: border-box;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="date"]:focus,
+.form-group input[type="tel"]:focus,
+.form-group select:focus {
+    border-color: #a56de2;
+}
+
+.form-group select {
+    appearance: none;
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 12px;
+}
+
+
+.btn {
+    background-color: #8b46d7;
     color: #ffffff;
     border: none;
     padding: 0.75rem 1.5rem;
     border-radius: 10px;
     cursor: pointer;
-    margin-top: 1rem;
     font-weight: bold;
-    font-size: 1.5rem;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+    width: 100%;
+    margin-top: 1rem;
 }
 
-.language-button:hover,
-.level-button:hover {
-    background-color: #8b46d7;
-}
 
 @media (max-width: 992px) {
     header {
