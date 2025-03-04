@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
 body {
     font-family: Arial, sans-serif;
     background-color: #0d1117;
@@ -25,7 +26,7 @@ header {
 h1 {
     margin: 0;
     font-size: 24px;
-    color: #a855f7;
+    color: rgb(123, 45, 234);
 }
 
 nav ul {
@@ -35,13 +36,15 @@ nav ul {
 }
 
 nav ul li {
+    font-size: 15px;
     display: inline;
     margin-right: 15px;
 }
 
 nav ul li a {
-    color: #a855f7;
+    color: rgb(123, 45, 234);
     text-decoration: none;
+    padding: 20px;
     font-weight: bold;
     transition: color 0.3s;
 }
@@ -101,8 +104,8 @@ footer {
     font-size: 14px;
     border-top: 1px solid #a855f7;
     margin-top: auto;
-    width: 97%;   
-     
+    width: 97%;
+
 }
 
 .contact-section {
@@ -128,7 +131,9 @@ h4 {
     color: #a855f7;
 }
 
-.contact-form-input, .contact-form-select, .contact-form-textarea {
+.contact-form-input,
+.contact-form-select,
+.contact-form-textarea {
     width: calc(100% - 22px);
     box-sizing: border-box;
     padding: 10px;
@@ -147,7 +152,7 @@ h4 {
     text-align: center;
 }
 
-.contact-form-submit, 
+.contact-form-submit,
 .contact-form-clear {
     background-color: #a855f7;
     color: #161b22;
@@ -160,10 +165,11 @@ h4 {
     transition: background 0.3s;
 }
 
-.contact-form-submit:hover, 
+.contact-form-submit:hover,
 .contact-form-clear:hover {
     background-color: #8b46d7;
 }
+
 .team-section {
     display: flex;
     justify-content: center;
@@ -182,6 +188,7 @@ h4 {
     margin: 0;
     padding: 0;
 }
+
 .team-card {
     background-color: #a855f7;
     color: #161b22;
@@ -191,15 +198,19 @@ h4 {
     text-align: center;
     transition: transform 0.3s ease-in-out;
 }
+
 .team-card:hover {
     transform: scale(1.1);
 }
+
 .team-card h3 {
     margin: 10px 0;
 }
+
 .team-card p {
     font-weight: bold;
 }
+
 .contact-btn {
     display: inline-block;
     background-color: #161b22;
@@ -213,10 +224,12 @@ h4 {
     text-decoration: none;
     transition: background 0.3s;
 }
+
 .contact-btn:hover {
     background-color: #161b22;
 }
 
+/* ------------- Index page ------------- */
 .Hero {
     padding-inline: 10vw;
 }
@@ -226,6 +239,7 @@ h4 {
     display: flex;
     height: 100vh;
 }
+
 .featured-text {
     position: relative;
     display: flex;
@@ -240,14 +254,14 @@ h4 {
 .featured-name {
     margin-bottom: -50px;
     color: rgba(144, 144, 144, 0.342);
-    font-size: 18px;
+    font-size: 24px;
     font-weight: 400;
 }
 
 .featured-name2 {
     margin-bottom: -10px;
     color: rgba(255, 255, 255, 0.055);
-    font-size: 63px;
+    font-size: 73px;
     font-family: "VT323", serif;
     font-weight: 400;
 }
@@ -258,36 +272,37 @@ h4 {
 }
 
 .featured-text-info {
-    font-size: 34px;
+    font-size: 40px;
     font-weight: bold;
     margin-bottom: 40px;
     color: rgb(195, 195, 195);
 }
 
 .featured-text-info2 {
-    font-size: 20px;
+    font-size: 21px;
     margin-bottom: 30px;
     font-weight: lighter;
     color: rgba(195, 195, 195, 0.736);
 }
+
 .text-btn {
     display: flex;
     gap: 30px;
 }
 
 .btn {
-    margin-top: 2rem;
+    margin-top: 2.5rem;
     padding: 8px 40px;
     border: 2px solid transparent;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 36px;
     cursor: pointer;
     transition: 0.3s ease;
-    border-radius: 25px;
+    border-radius: 50%;
 }
 
 .pureple-btn {
-    background: rgb(123, 45, 234);
+    background: rgb(86, 24, 173);
     color: white;
 }
 
@@ -326,6 +341,7 @@ h4 {
     height: 580px;
     object-fit: cover;
 }
+
 /* Quiz section*/
 
 .quiz-section {
@@ -413,12 +429,11 @@ h4 {
 
 .answer-button:active {
     background-color: #6a2f98;
-    /* اللون الغامق الذي ترغب به عند الضغط */
 }
 
 
-    /*----p4 styling----*/
-    
+/*----p4 styling----*/
+
 body.p4 {
     display: flex;
     flex-direction: column;
@@ -493,17 +508,17 @@ body.p4 {
 
 
 .btn {
-    background-color: #8b46d7;
+    background-color: #510c9b;
     color: #ffffff;
     border: none;
-    padding: 0.75rem 1.5rem;
-    border-radius: 10px;
+    padding: 12px 25px;
+    border-radius: 50px;
     cursor: pointer;
     font-weight: bold;
-    font-size: 1rem;
+    font-size: 20px;
     transition: background-color 0.3s;
     width: 100%;
-    margin-top: 1rem;
+    margin-top: 2rem;
 }
 
 
@@ -511,21 +526,45 @@ body.p4 {
     header {
         padding: 15px;
     }
+
     h2 {
         font-size: 2.2em;
     }
+
     h3 {
         font-size: 1.6em;
     }
+
     section {
         padding: 10px;
     }
-    p, h4 {
+
+    p,
+    h4 {
         font-size: 1em;
     }
- 
+
     .icons a {
         font-size: 1.5em;
+    }
+
+    .featured-text-info {
+        font-size: 25px;
+    }
+
+    .featured-text-info2 {
+        font-size: 18px;
+    }
+
+    .image {
+        width: 480px;
+        height: 380px;
+    }
+    
+    .image img {
+        margin-left: 80px;
+        width: 380px;
+        height: 380px;
     }
 }
 
@@ -533,16 +572,44 @@ body.p4 {
     body {
         padding: 15px;
     }
+
     h2 {
         font-size: 2em;
     }
+
     h3 {
         font-size: 1.5em;
     }
+
     section {
         margin: 5px 0;
     }
+    .btn {
+        font-size: small;
+    }
 
+    .image {
+        width: 320px;
+        height: 380px;
+    }
+    
+    .image img {
+        margin-left: 80px;
+        width: 230px;
+        height: 320px;
+    }
+
+    .featured-text-info {
+        font-size: 22px;
+    }
+
+    .featured-text-info2 {
+        font-size: 15px;
+    }
+
+    .typedText {
+       font-size: 60px;
+    }
     .icons a {
         font-size: 1.4em;
     }
@@ -552,18 +619,47 @@ body.p4 {
     header {
         padding: 10px;
     }
+
     h2 {
         font-size: 1.8em;
     }
+
     h3 {
         font-size: 1.4em;
     }
+
     section {
         padding: 10px;
+    }
+
+    .btn {
+        font-size: small;
+    }
+
+    .image {
+        width: 320px;
+        height: 380px;
+    }
+    
+    .image img {
+        margin-left: 40px;
+        width: 180px;
+        height: 280px;
+    }
+
+    .featured-text-info {
+        font-size: 25px;
+    }
+
+    .featured-text-info2 {
+        font-size: 15px;
+    }
+
+    .typedText {
+       font-size: 60px;
     }
 
     .icons a {
         font-size: 1.2em;
     }
 }
-
