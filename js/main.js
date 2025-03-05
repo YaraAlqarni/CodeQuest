@@ -6,5 +6,3 @@ var typingEffect = new Typed(".typedText", {
     backSpeed: 80,
     backDelay: 500
 });
-
-

@@ -17,6 +17,9 @@ body {
     align-items: center;
     flex-wrap: wrap;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 97%;
+
+    
   }
   
   h1 {
@@ -110,6 +113,7 @@ body {
     color: #c9d1d9;
     font-size: 14px;
     border-top: 1px solid #a855f7;
+    width: 97%;
   }
   
 .contact-section {
@@ -457,12 +461,10 @@ body.p4 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     min-height: 100vh;
     background-color: #21262d;
-    font-family: Arial, sans-serif;
-    color: #ffffff;
-    margin: 0;
+    font-family: Arial, sans-serif; 
+    color: #ffffff;   
 }
 
 .card {
@@ -525,7 +527,6 @@ body.p4 {
     background-size: 12px;
 }
 
-
 .btn {
     background-color: #510c9b;
     color: #ffffff;
@@ -539,6 +540,7 @@ body.p4 {
     width: 100%;
     margin-top: 2rem;
 }
+
 
 @media (max-width: 992px) {
     header {
