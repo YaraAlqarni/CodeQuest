@@ -540,58 +540,62 @@ body.p4 {
     margin-top: 2rem;
 }
 
-
 @media (max-width: 992px) {
     header {
+        text-align: center;
         padding: 15px;
     }
-
+    nav ul {
+        justify-content: center;
+    }
+    .team-section {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .team-card {
+        text-align: center;
+        margin: auto;
+    }
+    .contact-form {
+        width: 80%;
+        margin: auto;
+        text-align: center;
+    }
     .mytable {
         width: 80%;
-      }
-    
-      .cells {
+    }
+    .cells {
         padding: 20px;
-      }
-    
-      h2 {
+    }
+    h2 {
         font-size: 24px;
-      }
-    
-      h4 {
+    }
+    h4 {
         font-size: 20px;
-      }
-    
-      p {
+    }
+    p {
         font-size: 18px;
-      }
-
+    }
     h3 {
         font-size: 1.6em;
     }
-
     section {
         padding: 10px;
     }
-
-   
     .icons a {
         font-size: 1.5em;
     }
-
     .featured-text-info {
         font-size: 25px;
     }
-
     .featured-text-info2 {
         font-size: 18px;
     }
-
     .image {
         width: 480px;
         height: 380px;
     }
-    
     .image img {
         margin-left: 80px;
         width: 380px;
@@ -603,61 +607,62 @@ body.p4 {
     body {
         padding: 15px;
     }
+    .team-section {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        justify-content: center;
+    }
+    .team-card {
+        margin: auto;
+        text-align: center;
+    }
+    .contact-form {
+        width: 80%;
+        margin: auto;
+        text-align: center;
+    }
     .mytable {
         width: 90%;
-      }
-    
-      .cells {
+    }
+    .cells {
         padding: 15px;
-      }
-    
-      h2 {
+    }
+    h2 {
         font-size: 22px;
-      }
-    
-      h4 {
+    }
+    h4 {
         font-size: 18px;
-      }
-    
-      p {
+    }
+    p {
         font-size: 16px;
-      }
-    
-
-  
-
+    }
     h3 {
         font-size: 1.5em;
     }
-
     section {
         margin: 5px 0;
     }
     .btn {
         font-size: small;
     }
-
     .image {
         width: 320px;
         height: 380px;
     }
-    
     .image img {
         margin-left: 80px;
         width: 230px;
         height: 320px;
     }
-
     .featured-text-info {
         font-size: 22px;
     }
-
     .featured-text-info2 {
         font-size: 15px;
     }
-
     .typedText {
-       font-size: 60px;
+        font-size: 60px;
     }
     .icons a {
         font-size: 1.4em;
@@ -665,73 +670,67 @@ body.p4 {
 }
 
 @media (max-width: 576px) {
+    body {
+        font-size: 14px;
+    }
     nav ul {
         flex-direction: row;
-        align-items: left;
-      }
-    
-    
-      .mytable {
+        align-items: flex-start;;
+    }
+    .team-card, .contact-form {
+        width: 70%;
+        margin: auto;
+        text-align: center;
+    }
+    .contact-form-input, .contact-form-select, .contact-form-textarea {
+        width: 100%;
+    }
+    .mytable {
         width: 100%;
         border-spacing: 5px;
-      }
-      .cells {
+    }
+    .cells {
         padding: 10px;
-      }
-    
-      h2 {
+    }
+    h2 {
         font-size: 18px;
-      }
-    
-      h4 {
+    }
+    h4 {
         font-size: 16px;
-      }
-    
-      p {
+    }
+    p {
         font-size: 14px;
-      }
-    
-      .fa-brands {
+    }
+    .fa-brands {
         font-size: 18px;
-      }
-    
-   
-
+    }
     h3 {
         font-size: 1.4em;
     }
-
     section {
         padding: 10px;
     }
-
     .btn {
         font-size: small;
     }
-
     .image {
         width: 320px;
         height: 380px;
     }
-    
     .image img {
         margin-left: 40px;
         width: 180px;
         height: 280px;
     }
-
     .featured-text-info {
         font-size: 25px;
     }
-
     .featured-text-info2 {
         font-size: 15px;
     }
-
     .typedText {
-       font-size: 60px;
+        font-size: 60px;
     }
-
     .icons a {
         font-size: 1.2em;
     }
