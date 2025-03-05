@@ -154,12 +154,12 @@ h4 {
 
 .contact-form-submit,
 .contact-form-clear {
-    background-color: #a855f7;
+    background-color: rgb(123, 45, 234);
     color: #161b22;
     border: none;
     padding: 10px 20px;
     margin: 5px;
-    border-radius: 5px;
+    border-radius: 50px;
     cursor: pointer;
     font-size: 16px;
     transition: background 0.3s;
