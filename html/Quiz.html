@@ -1,15 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz</title>
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="favicon icon" href="../images/Favicon.png" type="image/favicon">
-
+    <link rel="stylesheet" href="../css/style.css"> 
 </head>
-
 <body class="quiz-page">
     <header>
         <h1>Quiz</h1>
@@ -21,80 +17,61 @@
             </ul>
         </nav>
     </header>
-    <h2>You have started the Quiz, complete the answers with confidence!</h2>
-    <section class="quiz-section">
-        <form class="quiz-form" method="post" action="submit.html">
-            <div class="question">
-                <label for="q1">1. Which data type is used to store a decimal number in Java?</label><br>
-                <button type="button" class="answer-button" value="A"
-                    onclick="document.getElementById('q1').value = 'A'">int</button><br>
-                <button type="button" class="answer-button" value="B"
-                    onclick="document.getElementById('q1').value = 'B'">double</button><br>
-                <button type="button" class="answer-button" value="C"
-                    onclick="document.getElementById('q1').value = 'C'">boolean</button><br>
-                <button type="button" class="answer-button" value="D"
-                    onclick="document.getElementById('q1').value = 'D'">Char</button><br>
-                <input type="hidden" id="q1" name="q1" required>
-            </div>
-            <div class="question">
-                <label for="q2">2. What is the purpose of the 'if' statement in programming</label><br>
-                <button type="button" class="answer-button" value="A"
-                    onclick="document.getElementById('q2').value = 'A'">To define a function</button><br>
-                <button type="button" class="answer-button" value="B"
-                    onclick="document.getElementById('q2').value = 'B'">To make decisions based on
-                    conditions</button><br>
-                <button type="button" class="answer-button" value="C"
-                    onclick="document.getElementById('q2').value = 'C'">To repeat a block of code</button><br>
-                <button type="button" class="answer-button" value="D"
-                    onclick="document.getElementById('q2').value = 'D'">To declare variables</button><br>
-                <input type="hidden" id="q2" name="q2" required>
-            </div>
-            <div class="question">
-                <label for="q3">3. What does the 'for' loop do in programming?</label><br>
-                <button type="button" class="answer-button" value="A"
-                    onclick="document.getElementById('q3').value = 'A'">Repeats a block of code a specified number of
-                    times</button><br>
-                <button type="button" class="answer-button" value="B"
-                    onclick="document.getElementById('q3').value = 'B'">Defines a function</button><br>
-                <button type="button" class="answer-button" value="C"
-                    onclick="document.getElementById('q3').value = 'C'">Stores data in an array</button><br>
-                <button type="button" class="answer-button" value="D"
-                    onclick="document.getElementById('q3').value = 'D'">Compares two values</button><br>
-                <input type="hidden" id="q3" name="q3" required>
-            </div>
-            <div class="question">
-                <label for="q4">4. Which of the following is NOT a valid variable name in Java?</label><br>
-                <button type="button" class="answer-button" value="A"
-                    onclick="document.getElementById('q4').value = 'A'">myVariable</button><br>
-                <button type="button" class="answer-button" value="B"
-                    onclick="document.getElementById('q4').value = 'B'">_myVariable</button><br>
-                <button type="button" class="answer-button" value="C"
-                    onclick="document.getElementById('q4').value = 'C'">1myVariable</button><br>
-                <button type="button" class="answer-button" value="D"
-                    onclick="document.getElementById('q4').value = 'D'">myVar_iable1</button><br>
-                <input type="hidden" id="q4" name="q4" required>
-            </div>
-            <div class="question">
-                <label for="q5">5. What is the default value of a boolean variable in Java?</label><br>
-                <button type="button" class="answer-button" value="A"
-                    onclick="document.getElementById('q5').value = 'A'">True</button><br>
-                <button type="button" class="answer-button" value="B"
-                    onclick="document.getElementById('q5').value = 'B'">False</button><br>
-                <button type="button" class="answer-button" value="C"
-                    onclick="document.getElementById('q5').value = 'C'">Null</button><br>
-                <button type="button" class="answer-button" value="D"
-                    onclick="document.getElementById('q5').value = 'D'">Zero</button><br>
-                <input type="hidden" id="q5" name="q5" required>
-            </div>
-            <div class="form-container">
-                <button type="submit" class="quiz-form-submit">Submit</button>
-                <button type="reset" class="quiz-form-clear">Reset</button>
-            </div>
-        </form>
-    </section>
+    <main>
+        <h2>You have started the Quiz, complete the answers with confidence!</h2>
+        <section class="quiz-section">
+            <h2 class="hidden-heading">Quiz Questions</h2>
+            <form class="quiz-form">
+                <article class="question">
+                    <h3 class="hidden-heading">Question 1</h3>
+                    <p>Q1. Which data type is used to store a decimal number in Java?</p>
+                    <button type="button" class="answer-button" value="A">int</button>
+                    <button type="button" class="answer-button" value="B">double</button>
+                    <button type="button" class="answer-button" value="C">boolean</button>
+                    <button type="button" class="answer-button" value="D">Char</button>
+                </article>
+                <article class="question">
+                    <h3 class="hidden-heading">Question 2</h3>
+                    <p>Q2. What is the purpose of the " if " statement in programming?</p>
+                    <button type="button" class="answer-button" value="A">To define a function</button>
+                    <button type="button" class="answer-button" value="B">To make decisions based on conditions</button>
+                    <button type="button" class="answer-button" value="C">To repeat a block of code</button>
+                    <button type="button" class="answer-button" value="D">To declare variables</button>
+                </article>
+                <article class="question">
+                    <h3 class="hidden-heading">Question 3</h3>
+                    <p>Q3. What does the 'for' loop do in programming?</p>
+                    <button type="button" class="answer-button" value="A">Repeats a block of code a specified number of times</button>
+                    <button type="button" class="answer-button" value="B">Defines a function</button>
+                    <button type="button" class="answer-button" value="C">Stores data in an array</button>
+                    <button type="button" class="answer-button" value="D">Compares two values</button>
+                </article>
+                <article class="question">
+                    <h3 class="hidden-heading">Question 4</h3>
+                    <p>Q4. Which of the following is NOT a valid variable name in Java?</p>
+                    <button type="button" class="answer-button" value="A">myVariable</button>
+                    <button type="button" class="answer-button" value="B">_myVariable</button>
+                    <button type="button" class="answer-button" value="C">1myVariable</button>
+                    <button type="button" class="answer-button" value="D">myVar_iable1</button>
+                </article>
+                <article class="question">
+                    <h3 class="hidden-heading">Question 5</h3>
+                    <p>Q5. What is the default value of a boolean variable in Java?</p>
+                    <button type="button" class="answer-button" value="A">True</button>
+                    <button type="button" class="answer-button" value="B">False</button>
+                    <button type="button" class="answer-button" value="C">Null</button>
+                    <button type="button" class="answer-button" value="D">Zero</button>
+                </article>
+                <section class="form-container">
+                    <h4 class="hidden-heading">Choose</h4>
+                    <button type="submit" class="quiz-form-submit">Submit</button>
+                    <button type="reset" class="quiz-form-clear">Reset</button>
+                </section>
+            </form>
+        </section>
+    </main>
     <footer>
         &copy; 2025 CodeQuest - all rights reserved
     </footer>
 </body>
-
 </html>
