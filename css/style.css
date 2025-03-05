@@ -6,119 +6,112 @@ body {
     color: #c9d1d9;
     margin: 0;
     padding: 0;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
-
-header {
+  }
+  
+  header {
     background-color: #161b22;
     color: #ffffff;
     padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 97%;
-}
-
-
-h1 {
-    margin: 0;
-    font-size: 24px;
-    color: rgb(123, 45, 234);
-}
-
-h2 {
+  }
+  
+  h1 {
     margin: 0;
     font-size: 24px;
     color: #a855f7;
-}
-h3 {
-    margin: 0;
-    font-size: 24px;
-    
-}
-
-nav ul {
+  }
+  
+  nav ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
-}
-
-nav ul li {
-    font-size: 15px;
-    display: inline;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  nav ul li {
     margin-right: 15px;
-}
-
-nav ul li a {
-    color: rgb(123, 45, 234);
+  }
+  
+  nav ul li a {
+    color: #a855f7;
     text-decoration: none;
-    padding: 20px;
     font-weight: bold;
     transition: color 0.3s;
-}
-
-nav ul li a:hover {
-    color: #a855f7;
-}
-
-.about-us {
-    padding: 40px;
-    text-align: center;
+  }
+  
+  nav ul li a:hover {
+    color: #ffffff;
+  }
+  
+  /* About us page */
+  .about-us {
+    margin-bottom: 20px;
     background-color: #21262d;
-    border-radius: 8px;
-}
-
-.mytable {
-    width: 80%;
-    border-collapse: collapse;
-    margin: 20px auto;
+  }
+  
+  .mytable {
+    width: 90%;
+    border-collapse: separate;
+    border-spacing: 10px;
+    margin: 20px auto 0;
     background-color: #161b22;
-    border: 1px solid #30363d;
-    border-radius: 8px;
-    overflow: hidden;
-}
-
-.tableHeader {
+  }
+  
+  .tableHeader {
+    padding: 10px;
     background-color: #a855f7;
+    text-align: left;
+    margin-top: 40px;
+    border-radius: 10px;
     color: #ffffff;
     font-weight: bold;
-}
-
-.cells {
-    padding: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .cells {
+    padding: 15px;
     text-align: center;
-    border-bottom: 1px solid #30363d;
-}
-
-
-
-.fa-brands {
+    border: 1px solid #30363d;
+    vertical-align: top;
+    background-color: #0d1117;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  img {
+    border-radius: 10px;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  .fa-brands {
     margin: 5px;
     color: #a855f7;
     font-size: 20px;
     transition: transform 0.3s ease-in-out;
-}
-
-.fa-brands:hover {
+  }
+  
+  .fa-brands:hover {
     transform: scale(1.2);
     color: #ffffff;
-}
-
-footer {
+  }
+  
+  footer {
     text-align: center;
     padding: 20px;
     background-color: #161b22;
     color: #c9d1d9;
     font-size: 14px;
     border-top: 1px solid #a855f7;
-    margin-top: auto;
-    width: 97%;
-
-}
-
+  }
+  
 .contact-section {
     width: 50%;
     margin: 50px auto;
@@ -553,9 +546,25 @@ body.p4 {
         padding: 15px;
     }
 
-    h2 {
-        font-size: 2.2em;
-    }
+    .mytable {
+        width: 80%;
+      }
+    
+      .cells {
+        padding: 20px;
+      }
+    
+      h2 {
+        font-size: 24px;
+      }
+    
+      h4 {
+        font-size: 20px;
+      }
+    
+      p {
+        font-size: 18px;
+      }
 
     h3 {
         font-size: 1.6em;
@@ -565,11 +574,7 @@ body.p4 {
         padding: 10px;
     }
 
-    p,
-    h4 {
-        font-size: 1em;
-    }
-
+   
     .icons a {
         font-size: 1.5em;
     }
@@ -598,10 +603,28 @@ body.p4 {
     body {
         padding: 15px;
     }
+    .mytable {
+        width: 90%;
+      }
+    
+      .cells {
+        padding: 15px;
+      }
+    
+      h2 {
+        font-size: 22px;
+      }
+    
+      h4 {
+        font-size: 18px;
+      }
+    
+      p {
+        font-size: 16px;
+      }
+    
 
-    h2 {
-        font-size: 2em;
-    }
+  
 
     h3 {
         font-size: 1.5em;
@@ -642,13 +665,37 @@ body.p4 {
 }
 
 @media (max-width: 576px) {
-    header {
+    nav ul {
+        flex-direction: row;
+        align-items: left;
+      }
+    
+    
+      .mytable {
+        width: 100%;
+        border-spacing: 5px;
+      }
+      .cells {
         padding: 10px;
-    }
-
-    h2 {
-        font-size: 1.8em;
-    }
+      }
+    
+      h2 {
+        font-size: 18px;
+      }
+    
+      h4 {
+        font-size: 16px;
+      }
+    
+      p {
+        font-size: 14px;
+      }
+    
+      .fa-brands {
+        font-size: 18px;
+      }
+    
+   
 
     h3 {
         font-size: 1.4em;
