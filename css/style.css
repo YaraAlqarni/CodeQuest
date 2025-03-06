@@ -472,13 +472,23 @@ body.p4 {
     align-items: center;
     min-height: 100vh;
     background-color: #21262d;
-    font-family: Arial, sans-serif;
-    color: #ffffff;
+    font-family: Arial, sans-serif; 
+    color: #ffffff;   
+}
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
 }
 
-.card {
+.main-content {
     margin-top: 5rem;
-    margin-bottom: 2rem;
+    margin-bottom: 5rem;
     background-color: #30363d;
     padding: 2rem;
     border-radius: 10px;
@@ -488,20 +498,31 @@ body.p4 {
     text-align: center;
 }
 
+.card{
+    margin-bottom: 4rem;
+    
+}
+
 .card h1 {
     font-size: 1.5rem;
     margin-bottom: 1.5rem;
     color: #ffffff;
 }
 
+.card h2 {
+    font-size: 1.25rem; 
+    margin-bottom: 1.5rem;
+    color: #ffffff;
+}
 .form-group {
     margin-bottom: 1.5rem;
     text-align: left;
 }
 
-.form-group label {
+.form-group h3 {
     display: block;
     margin-bottom: 0.5rem;
+    padding-top: 5px;
     color: #ffffff;
     font-size: 1rem;
 }
@@ -547,8 +568,9 @@ body.p4 {
     font-size: 20px;
     transition: background-color 0.3s;
     width: 100%;
-    margin-top: 2rem;
+    margin-top: 4rem;
 }
+
 
 
 @media (max-width: 992px) {
