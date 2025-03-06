@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CodeQuest</title>
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="favicon icon" href="../images/Favicon.png" type="image/favicon">
+    <link rel="icon" href="../images/Favicon.png" type="image/png">
 </head>
 
 <body class="p4">
@@ -20,59 +20,60 @@
             </ul>
         </nav>
     </header>
-
-    <section class="card" id="personal-info-card">
-        <h1>Personal Information</h1>
-        <form id="personal-info-form">
     
-            <section class="form-group">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" placeholder="Enter your name" required>
-            </section>
-    
-            <section class="form-group">
-                <label for="age">Age:</label>
-                <input type="date" id="age" name="age" required>
-            </section>
-    
-            <section class="form-group">
-                <label for="phone">Phone Number:</label>
-                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
-            </section>
-    
-            <button type="button" id="next-button" class="btn">Next</button>
-        </form>
+    <section class="main-content" >
+        <h2 class="visually-hidden">Main Content</h2>
+        <article class="card" id="personal-info-card">
+            <h2>Personal Information</h2>
+            <form id="personal-info-form">
+        
+                <article class="form-group">
+                    <h3>Name:</h3>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                </article>
+        
+                <article class="form-group">
+                    <h3>Age:</h3> 
+                    <input type="date" id="age" name="age" required>
+                </article>
+        
+                <article class="form-group">
+                    <h3>Phone Number:</h3> 
+                    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+                </article>
+        
+                <button type="button" id="next-button" class="btn">Next</button>
+            </form>
+        </article>
+        
+        <article class="card" id="programming-info-card" style="display: none;">
+            <h2>Programming Preferences</h2>
+            <form id="programming-info-form">
+        
+                <article class="form-group">
+                    <h3>Choose A Programming Language:</h3> 
+                    <select id="language" name="language" required>
+                        <option value="">Select a language</option>
+                        <option value="Java">Java</option>
+                        <option value="Python">Python</option>
+                    </select>
+                </article>
+        
+                <article class="form-group">
+                    <h3>Choose Your Level:</h3> 
+                    <select id="level" name="level" required>
+                        <option value="">Choose Your Level</option>
+                        <option value="Beginner">Beginner</option>
+                        <option value="Intermediate">Intermediate</option>
+                        <option value="Advanced">Advanced</option>
+                    </select>
+                </article>
+        
+                <button type="submit" class="btn">Submit</button>
+            </form>
+        </article>
     </section>
-    
-    <section class="card" id="programming-info-card" style="display: none;">
-        <h1>Programming Preferences</h1>
-        <form id="programming-info-form">
-    
-            <section class="form-group">
-                <label for="language">Choose A Programming Language:</label>
-                <select id="language" name="language" required>
-                    <option value="">Select a language</option>
-                    <option value="Java">Java</option>
-                    <option value="Python">Python</option>
-                </select>
-            </section>
-    
-            <section class="form-group">
-                <label for="level">Choose Your Level:</label>
-                <select id="level" name="level" required>
-                    <option value="">Choose Your Level</option>
-                    <option value="Beginner">Beginner</option>
-                    <option value="Intermediate">Intermediate</option>
-                    <option value="Advanced">Advanced</option>
-                </select>
-            </section>
-    
-            <button type="submit" class="btn">Submit</button>
-        </form>
-    </section>
-    
 
-    <!-- JavaScript -->
     <script src="../js/model.js"></script>
 
     <footer>
@@ -81,3 +82,5 @@
 </body>
 
 </html>
+
+
