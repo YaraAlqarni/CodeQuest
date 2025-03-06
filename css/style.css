@@ -188,6 +188,14 @@ h4 {
     padding: 90px 0;
     margin: 40px auto;
 }
+.team-section h2 {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px; 
+    font-size: 24px; 
+    color:#8b46d7
+}
 
 .contact-page {
     font-family: Arial, sans-serif;

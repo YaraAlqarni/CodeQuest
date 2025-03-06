@@ -22,9 +22,8 @@
         </nav>
     </header>
     <section class="contact-section">
-        <h4 class="contact-section-notice">Please note: all fields are required.</h4>
         <form class="contact-form" method="post" action="a" autocomplete="on">
-
+            <h4 class="contact-section-notice">Please note: all fields are required.</h4>
             <label class="contact-form-label" for="first-name">First Name:</label>
             <input class="contact-form-input" type="text" id="first-name" name="first-name" placeholder="First Name"
                 required pattern="[A-Za-z]+" title="Only letters are allowed">
@@ -65,10 +64,11 @@
             <textarea class="contact-form-textarea" id="message" name="message" rows="4"
                 placeholder="Enter purpose of contact message here." required></textarea>
 
-            <div class="form-container">
+            <section class="form-container">
                 <input class="contact-form-submit" type="submit" value="Send">
                 <input class="contact-form-clear" type="reset" value="Reset">
-            </div>
+                <h4 class="contact-section-notice">Thank you.</h4>
+            </section>
         </form>
     </section>
     <footer>
