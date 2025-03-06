@@ -6,9 +6,9 @@ body {
     color: #c9d1d9;
     margin: 0;
     padding: 0;
-  }
-  
-  header {
+}
+
+header {
     background-color: #161b22;
     color: #ffffff;
     padding: 20px;
@@ -19,53 +19,53 @@ body {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     width: 97%;
 
-    
-  }
-  
-  h1 {
+
+}
+
+h1 {
     margin: 0;
     font-size: 24px;
     color: #a855f7;
-  }
-  
-  nav ul {
+}
+
+nav ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
     display: flex;
     flex-wrap: wrap;
-  }
-  
-  nav ul li {
+}
+
+nav ul li {
     margin-right: 15px;
-  }
-  
-  nav ul li a {
+}
+
+nav ul li a {
     color: #a855f7;
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s;
-  }
-  
-  nav ul li a:hover {
+}
+
+nav ul li a:hover {
     color: #ffffff;
-  }
-  
-  /* About us page */
-  .about-us {
+}
+
+/* About us page */
+.about-us {
     margin-bottom: 20px;
     background-color: #21262d;
-  }
-  
-  .mytable {
+}
+
+.mytable {
     width: 90%;
     border-collapse: separate;
     border-spacing: 10px;
     margin: 20px auto 0;
     background-color: #161b22;
-  }
-  
-  .tableHeader {
+}
+
+.tableHeader {
     padding: 10px;
     background-color: #a855f7;
     text-align: left;
@@ -74,9 +74,9 @@ body {
     color: #ffffff;
     font-weight: bold;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  }
-  
-  .cells {
+}
+
+.cells {
     padding: 15px;
     text-align: center;
     border: 1px solid #30363d;
@@ -84,29 +84,29 @@ body {
     background-color: #0d1117;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  }
-  
-  img {
+}
+
+img {
     border-radius: 10px;
     max-width: 100%;
     height: auto;
     display: block;
     margin: 0 auto;
-  }
-  
-  .fa-brands {
+}
+
+.fa-brands {
     margin: 5px;
     color: #a855f7;
     font-size: 20px;
     transition: transform 0.3s ease-in-out;
-  }
-  
-  .fa-brands:hover {
+}
+
+.fa-brands:hover {
     transform: scale(1.2);
     color: #ffffff;
-  }
-  
-  footer {
+}
+
+footer {
     text-align: center;
     padding: 20px;
     background-color: #161b22;
@@ -114,8 +114,8 @@ body {
     font-size: 14px;
     border-top: 1px solid #a855f7;
     width: 97%;
-  }
-  
+}
+
 .contact-section {
     width: 50%;
     margin: 50px auto;
@@ -248,6 +248,13 @@ h4 {
     height: 100vh;
 }
 
+.microHeader {
+    font-size: 18px;
+    color: #ffffff07;
+    margin-bottom: 10px;
+}
+
+
 .featured-text {
     position: relative;
     display: flex;
@@ -280,6 +287,7 @@ h4 {
 }
 
 .featured-text-info {
+    text-align: left;
     font-size: 40px;
     font-weight: bold;
     margin-bottom: 40px;
@@ -396,9 +404,10 @@ h4 {
     margin: 0;
     padding: 0;
 }
+
 .quiz-page p {
     font-weight: bold;
-    color: #a855f7; 
+    color: #a855f7;
 }
 
 
@@ -463,8 +472,8 @@ body.p4 {
     align-items: center;
     min-height: 100vh;
     background-color: #21262d;
-    font-family: Arial, sans-serif; 
-    color: #ffffff;   
+    font-family: Arial, sans-serif;
+    color: #ffffff;
 }
 
 .card {
@@ -547,57 +556,73 @@ body.p4 {
         text-align: center;
         padding: 15px;
     }
+
     nav ul {
         justify-content: center;
     }
+
     .team-section {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
     }
+
     .team-card {
         text-align: center;
         margin: auto;
     }
+
     .contact-form {
         width: 80%;
         margin: auto;
         text-align: center;
     }
+
     .mytable {
         width: 80%;
     }
+
     .cells {
         padding: 20px;
     }
+
     h2 {
         font-size: 24px;
     }
+
     h4 {
         font-size: 20px;
     }
+
     p {
         font-size: 18px;
     }
+
     h3 {
         font-size: 1.6em;
     }
+
     section {
         padding: 10px;
     }
+
     .icons a {
         font-size: 1.5em;
     }
+
     .featured-text-info {
         font-size: 25px;
     }
+
     .featured-text-info2 {
         font-size: 18px;
     }
+
     .image {
         width: 480px;
         height: 380px;
     }
+
     .image img {
         margin-left: 80px;
         width: 380px;
@@ -609,63 +634,80 @@ body.p4 {
     body {
         padding: 15px;
     }
+
     .team-section {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 10px;
         justify-content: center;
     }
+
     .team-card {
         margin: auto;
         text-align: center;
     }
+
     .contact-form {
         width: 80%;
         margin: auto;
         text-align: center;
     }
+
     .mytable {
         width: 90%;
     }
+
     .cells {
         padding: 15px;
     }
+
     h2 {
         font-size: 22px;
     }
+
     h4 {
         font-size: 18px;
     }
+
     p {
         font-size: 16px;
     }
+
     h3 {
         font-size: 1.5em;
     }
+
     section {
         margin: 5px 0;
     }
+
     .btn {
         font-size: small;
     }
+
     .image {
         width: 320px;
         height: 380px;
     }
+
     .image img {
         margin-left: 80px;
         width: 230px;
         height: 320px;
     }
+
     .featured-text-info {
         font-size: 22px;
     }
+
     .featured-text-info2 {
         font-size: 15px;
     }
+
     .typedText {
         font-size: 60px;
     }
+
     .icons a {
         font-size: 1.4em;
     }
@@ -675,64 +717,86 @@ body.p4 {
     body {
         font-size: 14px;
     }
+
     nav ul {
         flex-direction: row;
-        align-items: flex-start;;
+        align-items: flex-start;
+        ;
     }
-    .team-card, .contact-form {
+
+    .team-card,
+    .contact-form {
         width: 70%;
         margin: auto;
         text-align: center;
     }
-    .contact-form-input, .contact-form-select, .contact-form-textarea {
+
+    .contact-form-input,
+    .contact-form-select,
+    .contact-form-textarea {
         width: 100%;
     }
+
     .mytable {
         width: 100%;
         border-spacing: 5px;
     }
+
     .cells {
         padding: 10px;
     }
+
     h2 {
         font-size: 18px;
     }
+
     h4 {
         font-size: 16px;
     }
+
     p {
         font-size: 14px;
     }
+
     .fa-brands {
         font-size: 18px;
     }
+
     h3 {
         font-size: 1.4em;
     }
+
     section {
         padding: 10px;
     }
+
     .btn {
         font-size: small;
     }
+
     .image {
         width: 320px;
         height: 380px;
     }
+
     .image img {
         margin-left: 40px;
         width: 180px;
         height: 280px;
     }
+
     .featured-text-info {
         font-size: 25px;
     }
+
     .featured-text-info2 {
         font-size: 15px;
     }
+
     .typedText {
         font-size: 60px;
     }
+
     .icons a {
         font-size: 1.2em;
     }
