@@ -188,14 +188,6 @@ h4 {
     padding: 90px 0;
     margin: 40px auto;
 }
-.team-section h2 {
-    display: block;
-    width: 100%;
-    text-align: center;
-    margin-bottom: 20px; 
-    font-size: 24px; 
-    color:#8b46d7
-}
 
 .contact-page {
     font-family: Arial, sans-serif;
@@ -342,13 +334,13 @@ h4 {
     justify-content: right;
     align-content: center;
     min-height: 80vh;
-    width: 50%;
+    width: 620px;
 }
 
 .image {
     margin: auto 0;
-    width: 520px;
-    height: 580px;
+    width: 320px;
+    height: 480px;
     overflow: hidden;
 }
 
@@ -623,7 +615,10 @@ body.p4 {
         gap: 10px;
         justify-content: center;
     }
-   
+    .team-card {
+        margin: auto;
+        text-align: center;
+    }
     .contact-form {
         width: 80%;
         margin: auto;
@@ -674,21 +669,6 @@ body.p4 {
     .icons a {
         font-size: 1.4em;
     }
-    .team-section h2 {
-        text-align: center;
-        font-size: 24px;
-        margin-bottom: 20px;
-    }
-    .team-section {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-    }
-    .team-card {
-        width: 30%;
-       
-       
-    }
 }
 
 @media (max-width: 576px) {
@@ -699,7 +679,7 @@ body.p4 {
         flex-direction: row;
         align-items: flex-start;;
     }
-  .contact-form {
+    .team-card, .contact-form {
         width: 70%;
         margin: auto;
         text-align: center;
@@ -755,12 +735,5 @@ body.p4 {
     }
     .icons a {
         font-size: 1.2em;
-    }
-    .team-section h2 {
-        font-size: 20px;
-        margin-bottom: 15px;
-    }
-    .team-card {
-        width: 30%;
     }
 }
