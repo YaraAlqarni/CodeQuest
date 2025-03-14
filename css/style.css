@@ -178,6 +178,7 @@ h4 {
     background-color: #8b46d7;
 }
 
+/*Contact us page*/
 .team-section {
     display: flex;
     justify-content: center;
@@ -187,6 +188,14 @@ h4 {
     max-width: 800px;
     padding: 90px 0;
     margin: 40px auto;
+}
+.team-section h2 {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px; 
+    font-size: 24px; 
+    color:#8b46d7
 }
 
 .contact-page {
@@ -236,6 +245,8 @@ h4 {
 .contact-btn:hover {
     background-color: #161b22;
 }
+
+
 
 /* ------------- Index page ------------- */
 .Hero {
