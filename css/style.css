@@ -273,8 +273,7 @@ h4 {
     align-content: center;
     min-height: 80vh;
     flex-direction: column;
-    width: 50%;
-    padding-left: 10px;
+    margin-left: -100px;
 }
 
 .featured-name {
