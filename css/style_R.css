@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0d1117;
+    color: #c9d1d9;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #161b22;
+    color: #ffffff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 97%;
+
+
+}
+
+h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #a855f7;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    margin-right: 15px;
+}
+
+nav ul li a {
+    color: #a855f7;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ffffff;
+}
+
+/*----p4 styling----*/
+
+body.p4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #21262d;
+    font-family: Arial, sans-serif; 
+    color: #ffffff;   
+}
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+.main-content {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    background-color: #30363d;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(59, 54, 54, 0.2);
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+}
+
+.card{
+    margin-bottom: 4rem;
+    
+}
+
+.card h1 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: #ffffff;
+}
+
+.card h2 {
+    font-size: 1.25rem; 
+    margin-bottom: 1.5rem;
+    color: #ffffff;
+}
+.form-group {
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.form-group h3 {
+    display: block;
+    margin-bottom: 0.5rem;
+    padding-top: 5px;
+    color: #ffffff;
+    font-size: 1rem;
+}
+
+.form-group input[type="text"],
+.form-group input[type="date"],
+.form-group input[type="tel"],
+.form-group select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 2px solid #8b46d7;
+    border-radius: 10px;
+    background-color: #30363d;
+    color: #ffffff;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s;
+    box-sizing: border-box;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="date"]:focus,
+.form-group input[type="tel"]:focus,
+.form-group select:focus {
+    border-color: #a56de2;
+}
+
+.form-group select {
+    appearance: none;
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 12px;
+}
+
+.btn {
+    background-color: #510c9b;
+    color: #ffffff;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 20px;
+    transition: background-color 0.3s;
+    width: 100%;
+    margin-top: 4rem;
+}

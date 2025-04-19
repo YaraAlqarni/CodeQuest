@@ -1,0 +1,25 @@
+{
+  "name": "codequest",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YaraAlqarni/CodeQuest.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/YaraAlqarni/CodeQuest/issues"
+  },
+  "homepage": "https://github.com/YaraAlqarni/CodeQuest#readme",
+  "description": "",
+  "dependencies": {
+    "express": "^5.1.0",
+    "express-validator": "^7.2.1"
+  }
+}
