@@ -5,11 +5,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const personalInfoForm = document.getElementById('personal-info-form');
     const programmingInfoForm = document.getElementById('programming-info-form');
 
-    nextButton.addEventListener('click', () => {
+    nextButton.addEventListener('click', async () => {
         const name = document.getElementById('name').value.trim();
         const age = document.getElementById('age').value;
         const phone = document.getElementById('phone').value.trim();
 
+        // Frontend validation first
         const nameRegex = /^[A-Za-z\s]+$/;
         if (!nameRegex.test(name)) {
             alert('Name should only contain letters and spaces.');
@@ -29,19 +30,49 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        // Phone number starts with 05, followed by 8 digits
         const phoneRegex = /^05\d{8}$/;
         if (!phoneRegex.test(phone)) {
             alert('Phone number must start with 05 and be followed by 8 digits.');
             return;
         }
 
-        personalInfoCard.style.display = 'none';
-        programmingInfoCard.style.display = 'block';
+        //Backend validation 
+        try {
+            const res = await fetch('/submit-form', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    name,
+                    age,
+                    phone,
+                    language: 'Java',
+                    level: 'Beginner'
+                })
+            });
+
+            if (!res.ok) {
+                const data = await res.json();
+                const errorMessages = data.errors.map(err => `• ${err.msg}`).join('\n');
+                alert(`Validation failed:\n${errorMessages}`);
+                return;
+            }
+
+            // Save data into hidden fields only after successful validation
+            document.getElementById('hidden-name').value = name;
+            document.getElementById('hidden-age').value = age;
+            document.getElementById('hidden-phone').value = phone;
+
+            //  go to the next form
+            personalInfoCard.style.display = 'none';
+            programmingInfoCard.style.display = 'block';
+
+        } catch (err) {
+            alert('An error occurred during validation. Please try again.');
+            console.error(err);
+        }
     });
 
     programmingInfoForm.addEventListener('submit', (e) => {
-        e.preventDefault();
         const language = document.getElementById('language').value;
         const level = document.getElementById('level').value;
 
@@ -50,6 +81,6 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        window.location.href = 'Quiz.html';
+        
     });
 });

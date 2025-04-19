@@ -8,7 +8,7 @@ const app = express();
 // Middleware to parse form data
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-
+ 
 // Serve static files (like HTML, CSS, JS)
 app.use(express.static(path.join(__dirname)));
 
@@ -56,10 +56,12 @@ app.post('/submit-form', [
         return res.status(400).json({ errors: errors.array() });
     }
 
-    // If all inputs are valid
-    res.send('Form submitted successfully!');
+    res.sendFile(path.join(__dirname, 'html', 'Quiz.html'));
 });
 
+app.get('/Quiz.html', (req, res) => {
+    res.sendFile(path.join(__dirname, 'html', 'Quiz.html'));
+  });
 
 const PORT = 3000;
 

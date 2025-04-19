@@ -1,15 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 
 body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
     font-family: Arial, sans-serif;
     background-color: #0d1117;
     color: #c9d1d9;
-    margin: 0;
-    padding: 0;
+   
 }
 
 header {
-    background-color: #161b22;
+    background-color: #7f808211;
     color: #ffffff;
     padding: 20px;
     display: flex;
@@ -20,6 +24,13 @@ header {
     width: 97%;
 
 
+}
+footer{
+    text-align: center;
+    padding: 1rem;
+    color: #ffffff;
+    font-size: 0.875rem;
+    background-color: transparent; /* or keep it subtle if needed */
 }
 
 h1 {
@@ -61,6 +72,7 @@ body.p4 {
     background-color: #21262d;
     font-family: Arial, sans-serif; 
     color: #ffffff;   
+    background: url('../images/photo_2025.jpg');
 }
 .visually-hidden {
     position: absolute;
@@ -74,20 +86,28 @@ body.p4 {
 }
 
 .main-content {
-    margin-top: 5rem;
-    margin-bottom: 5rem;
-    background-color: #30363d;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
     padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(59, 54, 54, 0.2);
-    width: 100%;
-    max-width: 500px;
-    text-align: center;
+ 
 }
 
-.card{
-    margin-bottom: 4rem;
-    
+.card {
+    background: rgba(255, 255, 255, 0.05); /* translucent background */
+    backdrop-filter: blur(10px); /* glass blur effect */
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    width: 100%;
+    max-width: 400px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    color: #ffffff;
+    text-align: left;
 }
 
 .card h1 {
@@ -95,16 +115,19 @@ body.p4 {
     margin-bottom: 1.5rem;
     color: #ffffff;
 }
-
 .card h2 {
-    font-size: 1.25rem; 
+    font-size: 2rem;
     margin-bottom: 1.5rem;
-    color: #ffffff;
+    text-align: center;
+    font-weight: bold;
 }
-.form-group {
-    margin-bottom: 1.5rem;
-    text-align: left;
+
+.form-group h3 {
+    font-size: 0.95rem;
+    color: #c9d1d9;
+    margin-bottom: 0.5rem;
 }
+
 
 .form-group h3 {
     display: block;
@@ -123,7 +146,6 @@ body.p4 {
     border: 2px solid #8b46d7;
     border-radius: 10px;
     background-color: #30363d;
-    color: #ffffff;
     font-size: 1rem;
     outline: none;
     transition: border-color 0.3s;
@@ -145,15 +167,19 @@ body.p4 {
 }
 
 .btn {
-    background-color: #510c9b;
+    background-color: #a855f7;
     color: #ffffff;
     border: none;
     padding: 12px 25px;
     border-radius: 50px;
     cursor: pointer;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 1rem;
     transition: background-color 0.3s;
     width: 100%;
-    margin-top: 4rem;
+    margin-top: 2rem;
+}
+
+.btn:hover {
+    background-color: #9333ea;
 }
