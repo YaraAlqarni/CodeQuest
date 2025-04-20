@@ -10,7 +10,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const age = document.getElementById('age').value;
         const phone = document.getElementById('phone').value.trim();
 
-        // Frontend validation first
         const nameRegex = /^[A-Za-z\s]+$/;
         if (!nameRegex.test(name)) {
             alert('Name should only contain letters and spaces.');
@@ -36,7 +35,8 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        //Backend validation 
+        let backendValidated = false;
+
         try {
             const res = await fetch('/submit-form', {
                 method: 'POST',
@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     name,
                     age,
                     phone,
-                    language: 'Java',
+                    language: 'Java', 
                     level: 'Beginner'
                 })
             });
@@ -53,26 +53,29 @@ document.addEventListener('DOMContentLoaded', () => {
             if (!res.ok) {
                 const data = await res.json();
                 const errorMessages = data.errors.map(err => `• ${err.msg}`).join('\n');
-                alert(`Validation failed:\n${errorMessages}`);
+                alert(`Backend validation failed:\n${errorMessages}`);
                 return;
             }
 
-            // Save data into hidden fields only after successful validation
+            backendValidated = true;
+        } catch (err) {
+            console.warn('Backend not available. Fallback to client-side.');
+            backendValidated = true;
+        }
+
+        if (backendValidated) {
             document.getElementById('hidden-name').value = name;
             document.getElementById('hidden-age').value = age;
             document.getElementById('hidden-phone').value = phone;
 
-            //  go to the next form
             personalInfoCard.style.display = 'none';
             programmingInfoCard.style.display = 'block';
-
-        } catch (err) {
-            alert('An error occurred during validation. Please try again.');
-            console.error(err);
         }
     });
 
-    programmingInfoForm.addEventListener('submit', (e) => {
+    programmingInfoForm.addEventListener('submit', async (e) => {
+        e.preventDefault(); // always handle with JS now
+
         const language = document.getElementById('language').value;
         const level = document.getElementById('level').value;
 
@@ -81,6 +84,31 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        
+        const name = document.getElementById('hidden-name').value;
+        const age = document.getElementById('hidden-age').value;
+        const phone = document.getElementById('hidden-phone').value;
+
+        try {
+            const res = await fetch('/submit-form', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ name, age, phone, language, level })
+            });
+
+            if (!res.ok) {
+                const data = await res.json();
+                const errorMessages = data.errors.map(err => `• ${err.msg}`).join('\n');
+                alert(`Backend validation failed:\n${errorMessages}`);
+                return;
+            }
+
+            //  Server accepted the submission → go to quiz
+            window.location.href = 'Quiz.html';
+
+        } catch (err) {
+            console.warn('Server offline. Skipping backend check.');
+            // Fallback for offline mode
+            window.location.href = 'Quiz.html';
+        }
     });
 });
