@@ -4,8 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const answerButtons = document.querySelectorAll(".answer-button");
     const correctAnswers = {
         0: "B", 1: "A", 2: "C", 3: "B", 4: "C",
-        5: "A", 6: "C", 7: "B", 8: "B", 9: "B"
-    };
+        5: "A", 6: "C", 7: "B", 8: "B", 9: "B"};
 
     const userAnswers = {};
 

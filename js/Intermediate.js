@@ -77,4 +77,5 @@ document.addEventListener("DOMContentLoaded", () => {
         document.body.innerHTML = resultHTML;
         window.scrollTo(0, 0);
     });
+    
 });
