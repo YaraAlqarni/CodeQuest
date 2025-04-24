@@ -2,63 +2,302 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="favicon icon" href="../images/Favicon.png" type="image/favicon">
-    <title>CodeQuest</title>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <!--FAVICON -->
+   <link rel="icon" type="image/png" href="../images/Favicon.png" />
+   <!--ICONS-->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+   <!--SWIPER CSS-->
+   <link rel="stylesheet" href="../css/swiper-bundle.min.css">
+   <!--CSS-->
+   <link rel="stylesheet" href="../css/index.css">
+   <title>CodeQuest</title>
 </head>
 
 <body>
-    <header>
-        <h1>CodeQuest</h1>
-        <nav>
-            <ul>
-                <li><a class="active" href="index.html">Home</a></li>
-                <li><a href="About-us.html">About us</a></li>
-                <li><a href="Contact-us.html">Contact Us</a></li>
+   <!--==================== HEADER ====================-->
+   <header class="header" id="header">
+      <nav class="nav container">
+         <a href="#" class="nav__logo">CodeQuest</a>
+
+         <div class="nav__menu" id="nav-menu">
+            <ul class="nav__list">
+               <li>
+                  <a href="#home" class="nav__link active-link">Home</a>
+               </li>
+
+               <li>
+                  <a href="#about" class="nav__link">About</a>
+               </li>
+
+               <li>
+                  <a href="#Editor" class="nav__link">Editor</a>
+               </li>
+
+               <li>
+                  <a href="#Qizzes" class="nav__link">Qizzes</a>
+               </li>
+
+               <li>
+                  <a href="#contact" class="nav__link">Contact</a>
+               </li>
             </ul>
-        </nav>
-    </header>
 
-    <main class="Hero">
-        <section class="featured-box">
-            <h5 class="microHeader">CodeQuest</h5>
+            <!-- Close button -->
+            <div class="nav__close" id="nav-close">
+               <i class="ri-close-large-line"></i>
+            </div>
+         </div>
 
-            <article class="featured-text">
-                <div>
-                    <h6 class="featured-name">WELCOME TO</h6>
-                    <p class="featured-name2"><span class="typedText"></span></p>
-                </div>
+         <!-- Toggle button -->
+         <div class="nav__toggle" id="nav-toggle">
+            <i class="ri-menu-line"></i>
+         </div>
+      </nav>
+   </header>
 
-                <section>
-                    <h4 class="featured-text-info">Join now and turn learning into an exciting journey!</h4>
-                    <p class="featured-text-info2">Learn to Code Through Play, Master coding fundamentals with
-                        interactive puzzles, and real-time coding adventures.</p>
-                </section>
+   <main class="main">
 
-                <div class="text-btn">
-                    <button class="btn pureple-btn" onclick="location.href='P4.html'">Start Now!</button>
-                    <button class="btn" onclick="location.href='Contact-us.html'">Contact us</button>
-                </div>
-            </article>
+      <!--==================== HOME ====================-->
+      <section class="home grid section" id="home">
+         <img src="../images/home-bg.png" alt="image" class="home__bg">
 
-            <figure class="featured-image">
-                <div class="image">
-                    <img src="../images/Cube.png" alt="Logo">
-                </div>
-            </figure>
-        </section>
-    </main>
+         <div class="home__data">
+            <h3 class="home__subtitle">turn learning into an exciting journey!</h3>
+            <h1 class="home__title">CODE QUEST</h1>
+            <div class="home__gradient"></div>
 
-    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
-    <script src="../js/main.js"></script>
 
-    <footer>
-        &copy; 2025 CodeQuest - all rights reserved
-    </footer>
+
+            <a href="#about" class="home__button">
+               <span>START</span>
+               <i class="ri-arrow-down-s-line"></i>
+            </a>
+      </section>
+
+      <!--==================== ABOUT ====================-->
+      <section class="about section" id="about">
+         <div class="about__container container grid">
+            <div class="about__data">
+               <h6 class="featured-name">WELCOME TO</h6>
+               <h2 class="featured-name2"><span class="typedText"></span>
+               </h2>
+
+               <p class="about__description">
+                  Master programming fundamentals through Quizzes
+                  interactive puzzles, and real-time code Editor.
+                  Our platform blends education with engagement,
+                  providing a hands-on approach to learning that
+                  builds both skill and confidence.
+               </p>
+
+               <a href="../html/About-us.html" class="button button__ghost" id="detailsButton">
+                  DETAILS <i class="ri-arrow-right-s-line"></i>
+               </a>
+            </div>
+
+            <div class="about__video">
+               <video src="../images/about-vid.mp4" autoplay loop muted class="about__file"></video>
+            </div>
+         </div>
+      </section>
+
+      <!--==================== Editor ====================-->
+      <section class="Editor section" id="Editor">
+         <h2 class="section__title">Code with clarity and precision</h2>
+
+         <div class="models__editor-container container">
+            <div class="models__image-wrapper">
+               <div class="home__swiper swiper">
+                  <div class="swiper-wrapper">
+                     <article class="home__article swiper-slide">
+                        <img src="../images/editor.png" alt="image" class="home__img" />
+                     </article>
+                  </div>
+               </div>
+            </div>
+            <div class="models__text-wrapper">
+               <div id="editorSub"> <a href="../html/editor.html" class="editor__subtitle">Smart Coding Workspace <i
+                        class="ri-arrow-right-s-line"></i></p>
+               </div>
+               <p class="editor__description">
+                  Code smarter with our intuitive editor. Write, run, and test code instantly with real-time feedback
+                  and syntax highlighting — all in one streamlined workspace.
+               </p>
+            </div>
+         </div>
+      </section>
+
+
+
+
+      <!--==================== Qizzes ====================-->
+      <section class="Qizzes_section" id="Qizzes">
+         <span class="section__subtitle">Interactive Quizzes
+         </span>
+         <h2 class="section__title Qizzes__title">
+            Challenge your skills through coding quizzes <br>
+            with instant feedback!
+         </h2>
+
+         <div class="Qizzes__container container grid">
+            <div class="Qizzes__content">
+               <!-- Wrapper for the animated scrolling -->
+               <div class="Qizzes__logos-wrapper">
+                  <div class="Qizzes__logos-track">
+                     <img src="../images/py.svg" alt="Python" class="logo">
+                     <img src="../images/java.svg" alt="Git" class="logo">
+                     <img src="../images/c.svg" alt="CSS3" class="logo">
+                     <img src="../images/c+.svg" alt="CSS3" class="logo">
+
+                     <!-- DUPLICATE the same logos -->
+                     <img src="../images/js.svg" alt="Python" class="logo">
+                     <img src="../images/py.svg" alt="Git" class="logo">
+                     <img src="../images/java.svg" alt="CSS3" class="logo">
+                     <img src="../images/c+.svg" alt="CSS3" class="logo">
+
+                     <!-- DUPLICATE the same logos -->
+                     <img src="../images/c.svg" alt="Python" class="logo">
+                     <img src="../images/js.svg" alt="Git" class="logo">
+                     <img src="../images/py.svg" alt="CSS3" class="logo">
+                     <img src="../images/c+.svg" alt="CSS3" class="logo">
+
+                     <!-- DUPLICATE the same logos -->
+                     <img src="../images/java.svg" alt="Python" class="logo">
+                     <img src="../images/c+.svg" alt="Git" class="logo">
+                     <img src="../images/c.svg" alt="CSS3" class="logo">
+                     <img src="../images/py.svg" alt="CSS3" class="logo">
+
+                  </div>
+
+                  <!-- ANOTHER ROW -->
+                  <div class="Qizzes__logos-track2">
+                     <img src="../images/py.svg" alt="Python" class="logo">
+                     <img src="../images/java.svg" alt="Git" class="logo">
+                     <img src="../images/c.svg" alt="CSS3" class="logo">
+                     <img src="../images/c+.svg" alt="CSS3" class="logo">
+
+                     <!-- DUPLICATE the same logos -->
+                     <img src="../images/java.svg" alt="Git" class="logo">
+                     <img src="../images/js.svg" alt="Git" class="logo">
+                     <img src="../images/c+.svg" alt="CSS3" class="logo">
+                     <img src="../images/py.svg" alt="Python" class="logo">
+                     <img src="../images/java.svg" alt="Git" class="logo">
+                     <img src="../images/c+.svg" alt="CSS3" class="logo">
+                     <img src="../images/c.svg" alt="CSS3" class="logo">
+                     <img src="../images/py.svg" alt="Python" class="logo">
+
+
+                  </div>
+
+               </div>
+               <a href="p4.html" class="button Qizzes__button">
+                  TRY IT! <i class="ri-arrow-right-s-line"></i>
+               </a>
+
+            </div>
+         </div>
+      </section>
+
+      <!--==================== CONTACT ====================-->
+      <section class="contact section" id="contact">
+         <div class="contact__container container grid">
+            <div class="contact__content">
+               <h2 class="section__title contact__title">
+                  CONTACT US
+               </h2>
+
+               <form action="" class="contact__form grid">
+                  <div class="contact__inputs grid">
+
+
+                     <div class="contact__box">
+                        <label for="email" class="contact__label">Email</label>
+                        <input type="email" id="email" placeholder="Enter your email" class="contact__input">
+                     </div>
+
+                     <div class="contact__box">
+                        <label for="message" class="contact__label">Message</label>
+                        <input type="text" id="name" placeholder="Enter Your Message" class="contact__input">
+                     </div>
+                  </div>
+
+                  <button type="submit" class="button contact__button">
+                     SEND EMAIL <i class="ri-arrow-right-s-line"></i>
+                  </button>
+                  <a href="../html/Contact-form.html" class="button button__ghost" id="moredetailsButton">
+                     DETAILS <i class="ri-arrow-right-s-line"></i>
+                  </a>
+               </form>
+
+            </div>
+
+            <img src="../images/HTML (2).png" alt="image" class="contact__img">
+         </div>
+      </section>
+   </main>
+
+   <!--==================== FOOTER ====================-->
+   <footer class="footer">
+      <div class="footer__container container grid">
+
+         <ul class="footer__links">
+            <li>
+               <a href="#" class="footer__link">Privacy & Legal</a>
+            </li>
+
+            <li>
+               <a href="#" class="footer__link">Contact</a>
+            </li>
+
+            <li>
+               <a href="#" class="footer__link">Locations</a>
+            </li>
+
+            <li>
+               <a href="#" class="footer__link">News</a>
+            </li>
+
+            <li>
+               <a href="#" class="footer__link">Forums</a>
+            </li>
+         </ul>
+
+         <div class="footer__social">
+            <a href="https://www.facebook.com/" target="_blank" class="footer__social-link">
+               <i class="ri-facebook-circle-line"></i>
+            </a>
+
+            <a href="https://www.instagram.com/" target="_blank" class="footer__social-link">
+               <i class="ri-instagram-line"></i>
+            </a>
+
+            <a href="https://twitter.com/" target="_blank" class="footer__social-link">
+               <i class="ri-twitter-x-line"></i>
+            </a>
+         </div>
+      </div>
+      <span class="footer__copy">
+         &#169; All Rights Reserved
+      </span>
+
+   </footer>
+
+
+
+   <!--=============== SCROLLREVEAL ===============-->
+   <script src="../js/scrollreveal.min.js"></script>
+
+   <!--=============== SWIPER JS ===============-->
+   <script src="../js/swiper-bundle.min.js"></script>
+
+   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+   <!--=============== MAIN JS ===============-->
+   <script src="../js/index.js"></script>
+
 </body>
 
 </html>

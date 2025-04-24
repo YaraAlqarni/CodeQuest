@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Python Tryit Editor</title>
+  <link rel="stylesheet" href="../css/editor.css" />
+
+  <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  </head>
+</head>
+
+<body>
+  <div class="toolbar">
+    <a href="../html/index.html">
+      <i class="fas fa-home"></i>
+    </a>
+    <button onclick="runCode()">Run ❯</button>
+    <select id="language">
+      <option value="71">Python</option>
+      <option value="54">C++</option>
+      <option value="62">Java</optionA>
+      <option value="63">JavaScript</option>
+    </select>
+  </div>
+
+
+  <div class="editor-container">
+    <div class="editor-pane">
+      <h3 id="editor"> </h3>
+    </div>
+    <div class="output-pane">
+      <h3>Output:</h3>
+      <pre id="output">Your code output will appear here...</pre>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/monaco-editor@latest/min/vs/loader.js"></script>
+  <script src="../js/editor.js"></script>
+</body>
+
+</html>
