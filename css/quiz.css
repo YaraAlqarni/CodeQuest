@@ -93,6 +93,7 @@ nav ul li a:hover {
     cursor: pointer;
     font-size: 16px;
     transition: background 0.3s;
+    
 }
 
 .quiz-form-submit:hover,
@@ -157,11 +158,16 @@ nav ul li a:hover {
 }
 
 .answer-button.selected {
-    background-color: #6a2f98; /* اللون الذي يظهر عند اختيار الإجابة */
-    color: #ffffff; /* تغيير اللون عند الضغط */
+    background-color: #6a2f98; 
+    color: #ffffff; 
 }
 
-
+.form-container {
+    display: flex;
+    justify-content: center;  
+    align-items: center;      
+    gap: 15px;                
+}
 
 .hidden-heading {
     position: absolute;
