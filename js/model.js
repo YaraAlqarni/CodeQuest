@@ -45,8 +45,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     name,
                     age,
                     phone,
-                    language: 'Java', 
-                    level: 'Beginner'
+                    language: 'Java', // dummy data for backend to satisfy schema
+                    level: 'Beginner'   // dummy level to allow validation
                 })
             });
 
@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             backendValidated = true;
         } catch (err) {
-            console.warn('Backend not available. Fallback to client-side.');
+            console.warn('⚠️ Backend not available. Proceeding with frontend only.');
             backendValidated = true;
         }
 
@@ -74,19 +74,18 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     programmingInfoForm.addEventListener('submit', async (e) => {
-        e.preventDefault(); // always handle with JS now
+        e.preventDefault(); // 🛑 prevent default HTML submit so JS takes over
 
         const language = document.getElementById('language').value;
         const level = document.getElementById('level').value;
+        const name = document.getElementById('hidden-name').value;
+        const age = document.getElementById('hidden-age').value;
+        const phone = document.getElementById('hidden-phone').value;
 
         if (!language || !level) {
             alert('Please fill out all programming preference fields.');
             return;
         }
-
-        const name = document.getElementById('hidden-name').value;
-        const age = document.getElementById('hidden-age').value;
-        const phone = document.getElementById('hidden-phone').value;
 
         try {
             const res = await fetch('/submit-form', {
@@ -101,14 +100,22 @@ document.addEventListener('DOMContentLoaded', () => {
                 alert(`Backend validation failed:\n${errorMessages}`);
                 return;
             }
-
-            //  Server accepted the submission → go to quiz
-            window.location.href = 'Quiz.html';
-
         } catch (err) {
-            console.warn('Server offline. Skipping backend check.');
-            // Fallback for offline mode
-            window.location.href = 'Quiz.html';
+            console.warn('⚠️ Server offline. Skipping backend check.');
+        }
+
+        // ✅ Redirect based on level
+        switch (level) {
+            case 'Beginner':
+                window.location.href = 'html/Quiz.html';
+                break;
+            case 'Intermediate':
+                window.location.href = 'IntermediateQuiz.html';
+                break;
+            case 'Advanced':
+                window.location.href = 'AdvancedQuiz.html';
+                break;
+    
         }
     });
 });

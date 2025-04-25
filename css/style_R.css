@@ -122,16 +122,10 @@ body.p4 {
     font-weight: bold;
 }
 
-.form-group h3 {
-    font-size: 0.95rem;
-    color: #c9d1d9;
-    margin-bottom: 0.5rem;
-}
-
 
 .form-group h3 {
     display: block;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
     padding-top: 5px;
     color: #ffffff;
     font-size: 1rem;
