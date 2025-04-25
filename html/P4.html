@@ -37,7 +37,8 @@
                         required 
                         maxlength="50" 
                         pattern="[A-Za-z\s]+" 
-                        title="Name should contain only letters and spaces.">
+                        title="Name should contain only letters and spaces."
+                        autocomplete="name">
                 </article>
 
                 <article class="form-group">
@@ -48,7 +49,8 @@
                         name="age" 
                         required 
                         max="2020-12-31" 
-                        title="You must be at least 4 years old.">
+                        title="You must be at least 4 years old."
+                        autocomplete="bday">
                 </article>
 
                 <article class="form-group">
@@ -62,7 +64,8 @@
                         required 
                         maxlength="12" 
                         pattern="^05\d{8}$" 
-                        title="Enter a valid phone number starting with 05, e.g., 0542345678.">
+                        title="Enter a valid phone number starting with 05, e.g., 0542345678."
+                        autocomplete="tel">
                 </article>
 
                 <button type="button" id="next-button" class="btn">Next</button>
@@ -71,8 +74,8 @@
         
         <!-- Programming Info Form -->
         <article class="card" id="programming-info-card" style="display: none;">
-            <h2>Programming Preferences</h2>
-            <form id="programming-info-form" action="/submit-form" method="POST">
+            <h2>Programming Level</h2>
+            <form id="programming-info-form" novalidate >
                
                 <input type="hidden" id="hidden-name" name="name">
                 <input type="hidden" id="hidden-age" name="age">

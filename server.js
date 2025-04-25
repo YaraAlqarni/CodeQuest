@@ -41,10 +41,6 @@ app.post('/submit-form', [
         .notEmpty().withMessage('Phone number is required')
         .matches(/^05\d{8}$/).withMessage('Phone number must start with 05 and be 10 digits long'),
 
-    body('language')
-        .notEmpty().withMessage('Language is required')
-        .isIn(['Java', 'Python']).withMessage('Invalid language'),
-
     body('level')
         .notEmpty().withMessage('Level is required')
         .isIn(['Beginner', 'Intermediate', 'Advanced']).withMessage('Invalid level')
@@ -62,6 +58,16 @@ app.post('/submit-form', [
 app.get('/Quiz.html', (req, res) => {
     res.sendFile(path.join(__dirname, 'html', 'Quiz.html'));
   });
+
+  app.get('/IntermediateQuiz.html', (req, res) => {
+    res.sendFile(path.join(__dirname, 'html', 'IntermediateQuiz.html'));
+  });
+  
+  app.get('/AdvancedQuiz.html', (req, res) => {
+    res.sendFile(path.join(__dirname, 'html', 'AdvancedQuiz.html'));
+  });
+  
+
 
 const PORT = 3000;
 

@@ -45,8 +45,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     name,
                     age,
                     phone,
-                    language: 'Java', // dummy data for backend to satisfy schema
-                    level: 'Beginner'   // dummy level to allow validation
+                    language: 'Java', 
+                    level: 'Beginner'   
                 })
             });
 
@@ -74,16 +74,15 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     programmingInfoForm.addEventListener('submit', async (e) => {
-        e.preventDefault(); // 🛑 prevent default HTML submit so JS takes over
+        e.preventDefault(); //prevent default HTML submit so JS takes over
 
-        const language = document.getElementById('language').value;
         const level = document.getElementById('level').value;
         const name = document.getElementById('hidden-name').value;
         const age = document.getElementById('hidden-age').value;
         const phone = document.getElementById('hidden-phone').value;
 
-        if (!language || !level) {
-            alert('Please fill out all programming preference fields.');
+        if (!level) {
+            alert('Please fill out programming level fields.');
             return;
         }
 
@@ -101,21 +100,18 @@ document.addEventListener('DOMContentLoaded', () => {
                 return;
             }
         } catch (err) {
-            console.warn('⚠️ Server offline. Skipping backend check.');
-        }
+            console.warn('Server offline. Skipping backend check.');
+                }
 
-        // ✅ Redirect based on level
-        switch (level) {
-            case 'Beginner':
-                window.location.href = 'html/Quiz.html';
-                break;
-            case 'Intermediate':
-                window.location.href = 'IntermediateQuiz.html';
-                break;
-            case 'Advanced':
-                window.location.href = 'AdvancedQuiz.html';
-                break;
-    
-        }
+
+        //Redirect based on selected level
+        if (level === 'Beginner') {
+            window.location.href = 'Quiz.html';
+        } else if (level === 'Intermediate') {
+            window.location.href = 'IntermediateQuiz.html';
+        } else if (level === 'Advanced') {
+            window.location.href = 'AdvancedQuiz.html';
+        } 
+
     });
 });

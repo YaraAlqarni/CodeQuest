@@ -1,15 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 
 body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
     display: flex;
     flex-direction: column;
-    font-family: Arial, sans-serif;
-    background-color: #0d1117;
-    color: #c9d1d9;
-   
+    align-items: center;
+    min-height: 100vh;
+    background-color: #21262d;
+    font-family: Arial, sans-serif; 
+    color: #ffffff;   
+    background: url('../images/photo_2025.jpg');
 }
 
 header {
@@ -30,13 +29,13 @@ footer{
     padding: 1rem;
     color: #ffffff;
     font-size: 0.875rem;
-    background-color: transparent; /* or keep it subtle if needed */
+    background-color: transparent; 
 }
 
 h1 {
     margin: 0;
     font-size: 24px;
-    color: #a855f7;
+    color: #8f17ff;
 }
 
 nav ul {
@@ -64,16 +63,6 @@ nav ul li a:hover {
 
 /*----p4 styling----*/
 
-body.p4 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: 100vh;
-    background-color: #21262d;
-    font-family: Arial, sans-serif; 
-    color: #ffffff;   
-    background: url('../images/photo_2025.jpg');
-}
 .visually-hidden {
     position: absolute;
     width: 1px;
@@ -97,8 +86,8 @@ body.p4 {
 }
 
 .card {
-    background: rgba(255, 255, 255, 0.05); /* translucent background */
-    backdrop-filter: blur(10px); /* glass blur effect */
+    background: rgba(255, 255, 255, 0.05); 
+    backdrop-filter: blur(10px); 
     -webkit-backdrop-filter: blur(10px);
     border-radius: 15px;
     padding: 2rem;
@@ -131,6 +120,7 @@ body.p4 {
     font-size: 1rem;
 }
 
+
 .form-group input[type="text"],
 .form-group input[type="date"],
 .form-group input[type="tel"],
@@ -152,6 +142,18 @@ body.p4 {
 .form-group select:focus {
     border-color: #a56de2;
 }
+
+/* Autofill (browser fills automatically) */
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+textarea:-webkit-autofill, 
+select:-webkit-autofill {
+    background-color: #30363d !important;
+    box-shadow: 0 0 0px 1000px #30363d inset !important; 
+    -webkit-text-fill-color: #ffffff !important; 
+}
+
 
 .form-group select {
     appearance: none;
