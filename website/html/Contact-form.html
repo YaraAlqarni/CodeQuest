@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="favicon icon" href="../images/Favicon.png" type="image/favicon">
+
+</head>
+
+<body>
+    <header>
+        <h1>Contact form</h1>
+        <nav>
+            <ul>
+                <li><a class="active" href="index.html">Home</a></li>
+                <li><a href="About-us.html">About us</a></li>
+                <li><a href="Contact-us.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="contact-section">
+        <form class="contact-form" method="post" action="/submit-contact" autocomplete="on">
+            <h4 class="contact-section-notice">Please note: all fields are required.</h4>
+            <label class="contact-form-label" for="first-name">First Name:</label>
+            <input class="contact-form-input" type="text" id="first-name" name="first-name" placeholder="First Name"
+                required pattern="[A-Za-z]+" title="Only letters are allowed">
+
+            <label class="contact-form-label" for="last-name">Last Name:</label>
+            <input class="contact-form-input" type="text" id="last-name" name="last-name" placeholder="Last Name"
+                required pattern="[A-Za-z]+" title="Only letters are allowed">
+
+            <label class="contact-form-label" for="gender">Gender:</label>
+            <select class="contact-form-select" id="gender" name="gender" required>
+                <option value="" disabled selected>Select Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+
+            <label class="contact-form-label" for="telephone">Mobile:</label>
+            <input class="contact-form-input" type="tel" id="telephone" name="telephone" placeholder="Only Numbers"
+                required pattern="\d{10}" minlength="10" maxlength="10" title="Please enter a 10-digit phone number">
+
+            <label class="contact-form-label" for="date-of-birth">Date of Birth:</label>
+            <input class="contact-form-input" type="date" id="date-of-birth" name="date-of-birth" required
+               >
+
+            <label class="contact-form-label" for="email">Email Address:</label>
+            <input class="contact-form-input" type="email" id="email" name="email" placeholder="name@domain.com"
+                required minlength="3" maxlength="150" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}"
+                title="Please enter a valid email address (e.g., name@domain.com)">
+
+            <label class="contact-form-label" for="language">Language of Communication:</label>
+            <select class="contact-form-select" id="language" name="language" required>
+                <option value="" disabled selected>Select Language</option>
+                <option value="arabic">Arabic</option>
+                <option value="english">English</option>
+                <option value="french">French</option>
+            </select>
+
+            <label class="contact-form-label" for="message">Message:</label>
+            <textarea class="contact-form-textarea" id="message" name="message" rows="4"
+                placeholder="Enter purpose of contact message here." required></textarea>
+
+            <section class="form-container">
+                <input class="contact-form-submit" type="submit" value="Send">
+                <input class="contact-form-clear" type="reset" value="Reset">
+                <h4 class="contact-section-notice">Thank you.</h4>
+            </section>
+        </form>
+    </section>
+    <footer>
+        &copy; 2025 CodeQuest - all rights reserved
+    </footer>
+</body>
+
+</html>
