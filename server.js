@@ -161,7 +161,48 @@ app.get('/user-info', (req, res) => {
 });
 
 
-app.post('/submit-contact', (req, res) => {
+app.post('/submit-contact', [
+    body('first-name')
+        .trim()
+        .notEmpty().withMessage('First name is required')
+        .isAlpha('en-US', { ignore: ' ' }).withMessage('First name must only contain letters and spaces'),
+
+    body('last-name')
+        .trim()
+        .notEmpty().withMessage('Last name is required')
+        .isAlpha('en-US', { ignore: ' ' }).withMessage('Last name must only contain letters and spaces'),
+
+    body('gender')
+        .trim()
+        .notEmpty().withMessage('Gender is required')
+        .customSanitizer(value => value.charAt(0).toUpperCase() + value.slice(1).toLowerCase())
+        .isIn(['Male', 'Female']).withMessage('Invalid gender'),
+
+    body('telephone')
+        .notEmpty().withMessage('Telephone is required')
+        .matches(/^05\d{8}$/).withMessage('Telephone must start with 05 and be 10 digits long'),
+
+    body('date-of-birth')
+        .notEmpty().withMessage('Date of birth is required')
+        .isDate().withMessage('Date of birth must be a valid date'),
+
+    body('email')
+        .notEmpty().withMessage('Email is required')
+        .isEmail().withMessage('Invalid email address'),
+
+    body('language')
+        .notEmpty().withMessage('Language is required'),
+
+    body('message')
+        .optional()
+        .isLength({ max: 1000 }).withMessage('Message must be less than 1000 characters')
+], (req, res) => {
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+        return res.status(400).json({ errors: errors.array() });
+    }
+
+    // If no validation errors, continue saving
     const {
         ['first-name']: firstName,
         ['last-name']: lastName,
@@ -185,7 +226,7 @@ app.post('/submit-contact', (req, res) => {
             return res.status(500).send('Database error.');
         }
 
-        // After inserting, fetch the newly inserted data from the database
+        // After inserting, fetch the newly inserted data
         const newContactSql = `SELECT * FROM \`contact-info\` WHERE telephone = ?`;
         pool.query(newContactSql, [telephone], (err, rows) => {
             if (err) {
@@ -193,53 +234,54 @@ app.post('/submit-contact', (req, res) => {
                 return res.status(500).send('Error fetching data.');
             }
 
-            // Use the fetched data to generate the HTML
-            const contact = rows[0]; // Assuming the phone number is unique and returns one row
+            const contact = rows[0];
             const html = `
-                <!DOCTYPE html>
-                <html lang="en">
-                <head>
-                    <meta charset="UTF-8">
-                    <title>Contact Information Saved</title>
-                    <style>
-                        body { font-family: Arial, sans-serif; margin: 20px; background-color: #161b22 }
-                        h1 { text-align: center; color: #a855f7 }
-                        .info { max-width: 600px; margin: auto; padding: 20px; border: 1px solid #ccc; border-radius: 10px; }
-                        p { font-size: 1.2em;color: #a855f7 }
-                        button {
-                            margin-top: 20px;
-                            padding: 10px 20px;
-                            font-size: 1em;
-                            display: block;
-                            margin-left: auto;
-                            margin-right: auto;
-                            background-color: #a855f7;
-                            color: white
-                        }
-                    </style>
-                </head>
-                <body>
-                    <h1>Contact Information Saved</h1>
-                    <div class="info">
-                        <p><strong>First Name:</strong> ${contact.first_name}</p>
-                        <p><strong>Last Name:</strong> ${contact.last_name}</p>
-                        <p><strong>Gender:</strong> ${contact.gender}</p>
-                        <p><strong>Telephone:</strong> ${contact.telephone}</p>
-                        <p><strong>Date of Birth:</strong> ${contact.date_of_birth}</p>
-                        <p><strong>Email:</strong> ${contact.email}</p>
-                        <p><strong>Language:</strong> ${contact.language}</p>
-                        <p><strong>Message:</strong> ${contact.message}</p>
-                        <button onclick="window.location.href='/'">Back to Home</button>
-                    </div>
-                </body>
-                </html>
-            `;
+            <!DOCTYPE html>
+            <html lang="en">
+            <head>
+                <meta charset="UTF-8">
+                <title>Contact Information Saved</title>
+                <style>
+                    body { font-family: Arial, sans-serif; margin: 20px; background-color: #161b22 }
+                    h1 { text-align: center; color: #a855f7 }
+                    h2 { text-align: center; color: #a855f7; margin-top: 10px; }
+                    .info { max-width: 600px; margin: auto; padding: 20px; border: 1px solid #ccc; border-radius: 10px; }
+                    p { font-size: 1.2em;color: #a855f7 }
+                    button {
+                        margin-top: 20px;
+                        padding: 10px 20px;
+                        font-size: 1em;
+                        display: block;
+                        margin-left: auto;
+                        margin-right: auto;
+                        background-color: #a855f7;
+                        color: white
+                    }
+                </style>
+            </head>
+            <body>
+                <h1>Contact Information Saved</h1>
+                <h2>Thank you for contacting us!</h2>
+                <div class="info">
+                    <p><strong>First Name:</strong> ${contact.first_name}</p>
+                    <p><strong>Last Name:</strong> ${contact.last_name}</p>
+                    <p><strong>Gender:</strong> ${contact.gender}</p>
+                    <p><strong>Telephone:</strong> ${contact.telephone}</p>
+                    <p><strong>Date of Birth:</strong> ${contact.date_of_birth}</p>
+                    <p><strong>Email:</strong> ${contact.email}</p>
+                    <p><strong>Language:</strong> ${contact.language}</p>
+                    <p><strong>Message:</strong> ${contact.message}</p>
+                    <button onclick="window.location.href='/'">Back to Home</button>
+                </div>
+            </body>
+            </html>
+        `;
 
-            // Send the generated HTML as the response
             res.send(html);
         });
     });
 });
+
 
 // Serve other quiz pages
 app.get('/P4.html', (req, res) => {
